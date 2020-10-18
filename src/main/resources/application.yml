@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /forum
+    session:
+      cookie:
+        path: /
+  port: 8000
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/forum?characterEncoding=utf-8&useSSL=false&serverTimezone=Australia/Sydney
+    username: root
+    password: Aa1994101212
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+
+mybatis:
+  mapper-locations: classpath:touch/forum/mapper/*.xml
+  type-aliases-package: touch.forum.entity

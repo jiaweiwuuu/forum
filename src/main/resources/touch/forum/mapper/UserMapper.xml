@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="touch.forum.mapper.UserMapper">
+
+    <resultMap id="userMap" type="touch.forum.entity.User">
+        <result property="headUrl" column="head_url"/>
+    </resultMap>
+
+    <insert id="addUser" parameterType="touch.forum.entity.User">
+        insert into user values (#{id},#{name},#{password},#{salt},#{headUrl})
+    </insert>
+
+    <select id="getUserById" parameterType="int" resultType="touch.forum.entity.User" resultMap="userMap">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="getUserByName" parameterType="String" resultType="touch.forum.entity.User" resultMap="userMap">
+        select * from user where name = #{name}
+    </select>
+</mapper>
