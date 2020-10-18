@@ -28,8 +28,6 @@ public class FeedController {
         return ResponseUtil.makeSuccessResponse(feedList);
     }
 
-
-    //如何不关注时候删除
     @GetMapping("/pushfeeds")
     public ResultVO<Object> pushFeeds(){
         return null;

@@ -13,21 +13,21 @@ import java.util.List;
 @RestController
 @RequestMapping("/message")
 public class MessageController {
-    @Autowired
-    MessageService messageService;
-    @Autowired
-    HostHolder hostHolder;
-
-    @PostMapping("/send")
-    public ResultVO<Object> sendMessage(@RequestParam("to_id") Integer toId,
-                                        @RequestParam("content") String content){
-        int result = messageService.createMessage(hostHolder.getUser().getId(),toId,content);
-        return ResponseUtil.makeSuccessResponse();
-    }
-
-    @GetMapping("/list")
-    public ResultVO<Object> getMessages(@RequestParam("to_id") Integer toId){
-        List<Message> result = messageService.getMessageBetweenUsers(hostHolder.getUser().getId(),toId);
-        return ResponseUtil.makeSuccessResponse(result);
-    }
+//    @Autowired
+//    MessageService messageService;
+//    @Autowired
+//    HostHolder hostHolder;
+//
+//    @PostMapping("/send")
+//    public ResultVO<Object> sendMessage(@RequestParam("to_id") Integer toId,
+//                                        @RequestParam("content") String content){
+//        int result = messageService.createMessage(hostHolder.getUser().getId(),toId,content);
+//        return ResponseUtil.makeSuccessResponse();
+//    }
+//
+//    @GetMapping("/list")
+//    public ResultVO<Object> getMessages(@RequestParam("to_id") Integer toId){
+//        List<Message> result = messageService.getMessageBetweenUsers(hostHolder.getUser().getId(),toId);
+//        return ResponseUtil.makeSuccessResponse(result);
+//    }
 }
