@@ -10,6 +10,9 @@ import java.util.List;
 @Repository
 public interface QuestionMapper {
     List<Question> getQuestion(int userId, int offset, int limit);
+
+    List<Question> getAllQuestions();
+
     Question getQuestionById(int qid);
     int create(Question question);
 

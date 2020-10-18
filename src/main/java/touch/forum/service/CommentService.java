@@ -2,6 +2,7 @@ package touch.forum.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import touch.forum.consts.EntityEnum;
 import touch.forum.entity.Comment;
 import touch.forum.entity.Question;
 import touch.forum.entity.User;
@@ -26,8 +27,7 @@ public class CommentService {
          Comment comment = new Comment().setContent(content).setCreateAt(calendar.getTime()).setEntityId(entityId).setEntityType(entityType).setUserId(user.getId());
          int i = commentMapper.create(comment);
          int count = commentMapper.getCommentCount(entityId,entityType);
-         if(entityType == 0) {
-             //TODO async
+         if(entityType == EntityEnum.QUESTION.getValue()) {
              Question question = questionService.getQuestion(entityId);
              question.setCommentCount(count);
              questionService.updateQuestion(question);

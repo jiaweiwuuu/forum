@@ -6,7 +6,7 @@
         <result property="headUrl" column="head_url"/>
     </resultMap>
 
-    <insert id="addUser" parameterType="touch.forum.entity.User">
+    <insert id="addUser" parameterType="touch.forum.entity.User" useGeneratedKeys="true" keyProperty="id">
         insert into user values (#{id},#{name},#{password},#{salt},#{headUrl})
     </insert>
 

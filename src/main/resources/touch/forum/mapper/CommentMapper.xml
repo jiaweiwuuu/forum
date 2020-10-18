@@ -11,7 +11,7 @@
         select * from comment where id = #{id}
     </select>
 
-    <insert id="create" parameterType="touch.forum.entity.Comment">
+    <insert id="create" parameterType="touch.forum.entity.Comment" useGeneratedKeys="true" keyProperty="id">
         insert into comment values (#{id},#{content},#{entityId},#{entityType},#{createAt},#{userId})
     </insert>
 

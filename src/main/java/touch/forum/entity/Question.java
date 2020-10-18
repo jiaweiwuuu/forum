@@ -15,6 +15,6 @@ public class Question {
     private String content;
 
     private int userId;
-    private Date CreateAt;
+    private Date createAt;
     private int commentCount;
 }

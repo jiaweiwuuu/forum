@@ -18,14 +18,14 @@ public class QuestionController {
     @PostMapping("/create")
     public ResultVO<Object> createQuestion(@RequestParam String title,
                                    @RequestParam String content) {
-
+        int id;
         try{
-            service.createQuestion(title,content,hostHolder.getUser());
+            id = service.createQuestion(title,content,hostHolder.getUser());
         }
         catch (Exception e){
             return ResponseUtil.makeErrorResponse();
         }
-        return ResponseUtil.makeSuccessResponse();
+        return ResponseUtil.makeSuccessResponse(id);
 
     }
 
@@ -34,4 +34,7 @@ public class QuestionController {
         Question question = service.getQuestion(id);
         return ResponseUtil.makeSuccessResponse(question);
     }
+
+
+
 }

@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="touch.forum.mapper.QuestionMapper">
-    <insert id="create" parameterType="touch.forum.entity.Question">
+
+    <resultMap id="questionMap" type="touch.forum.entity.Question">
+        <result property="createAt" column="create_at"/>
+        <result property="commentCount" column="comment_count"/>
+    </resultMap>
+
+    <insert id="create" parameterType="touch.forum.entity.Question" useGeneratedKeys="true" keyProperty="id">
         insert into question values (#{id},#{title},#{content},#{userId},#{createAt},#{commentCount})
     </insert>
 
-    <select id="getQuestion" resultType="touch.forum.entity.Question">
+    <select id="getQuestion" resultType="touch.forum.entity.Question" resultMap="questionMap">
         select * from question where user_id = #{userId} order by id desc limit #{offset},#{limit}
     </select>
 
-    <select id="getQuestionById" resultType="touch.forum.entity.Question">
+    <select id="getAllQuestions" resultType="touch.forum.entity.Question" resultMap="questionMap">
+        select * from question order by id desc
+    </select>
+
+    <select id="getQuestionById" resultType="touch.forum.entity.Question" resultMap="questionMap">
         select * from question where id = #{qid}
     </select>
 
