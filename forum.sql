@@ -146,7 +146,6 @@ CREATE TABLE `user` (
   `password` varchar(128) NOT NULL,
   `salt` varchar(32) NOT NULL,
   `head_url` varchar(256) NOT NULL,
-  `score` int(11) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `index2` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
@@ -158,7 +157,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (3,'jiawei','123','adsfafd','asdfasf',0),(4,'name','123','s','1',0),(5,'nae','111','sss','head',0),(6,'jiawei123','F8F834832E90878C3D815C97E9600B73','6b78c','www.baidu.com',0),(7,'jiaweiwu7','9FA03476A55A46FB77C2112350408A10','ca43f','www.baidu.com',0),(8,'jiaweiwu1','D9E315F8C3E03EA00DDC423CD85D65AD','f075e','www.baidu.com',0),(9,'a','aaa','aaa','aaa',90),(10,'a','aaa','aaa','aaa',90),(11,'b','aaa','aaa','aaa',80),(12,'b','aaa','aaa','aaa',80),(13,'a','aaa','aaa','aaa',90),(14,'a','aaa','aaa','aaa',90),(15,'b','aaa','aaa','aaa',80),(16,'b','aaa','aaa','aaa',80);
+/*INSERT INTO `user` VALUES (3,'jiawei','123','adsfafd','asdfasf',0),(4,'name','123','s','1',0),(5,'nae','111','sss','head',0),(6,'jiawei123','F8F834832E90878C3D815C97E9600B73','6b78c','www.baidu.com',0),(7,'jiaweiwu7','9FA03476A55A46FB77C2112350408A10','ca43f','www.baidu.com',0),(8,'jiaweiwu1','D9E315F8C3E03EA00DDC423CD85D65AD','f075e','www.baidu.com',0),(9,'a','aaa','aaa','aaa',90),(10,'a','aaa','aaa','aaa',90),(11,'b','aaa','aaa','aaa',80),(12,'b','aaa','aaa','aaa',80),(13,'a','aaa','aaa','aaa',90),(14,'a','aaa','aaa','aaa',90),(15,'b','aaa','aaa','aaa',80),(16,'b','aaa','aaa','aaa',80);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
