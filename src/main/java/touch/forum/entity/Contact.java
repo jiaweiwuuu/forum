@@ -14,4 +14,5 @@ public class Contact {
     private String conversationId;
     private Date createAt;
     private Date updateAt;
+    private int latestMessageId;
 }

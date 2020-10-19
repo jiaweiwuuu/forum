@@ -15,9 +15,9 @@ public class ContactService {
     @Autowired
     private ContactMapper contactMapper;
 
-    public int addContact(String conversationId) {
+    public int addContact(String conversationId, int latestMessageId) {
         Calendar calendar = Calendar.getInstance();
-        Contact contact = new Contact().setConversationId(conversationId).setCreateAt(calendar.getTime()).setUpdateAt(calendar.getTime());
+        Contact contact = new Contact().setConversationId(conversationId).setCreateAt(calendar.getTime()).setUpdateAt(calendar.getTime()).setLatestMessageId(latestMessageId);
         return contactMapper.addContact(contact);
     }
 
@@ -30,10 +30,8 @@ public class ContactService {
         return contactMapper.updateContact(contact);
     }
 
-    public List<Integer> getContactList(int id) {
+    public List<Contact> getContactList(int id) {
         List<Integer> contactIdList = new ArrayList<>();
-        List<Contact> contactList = contactMapper.getContactList(String.valueOf(id));
-        contactList.forEach(x -> contactIdList.add(ConversationUtil.getContacterId(String.valueOf(id), x.getConversationId())));
-        return contactIdList;
+        return contactMapper.getContactList(String.valueOf(id));
     }
 }

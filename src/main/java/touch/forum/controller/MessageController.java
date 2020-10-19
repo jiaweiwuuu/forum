@@ -4,6 +4,7 @@ import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import touch.forum.ResultVO;
+import touch.forum.entity.ContactUser;
 import touch.forum.entity.HostHolder;
 import touch.forum.entity.Message;
 import touch.forum.entity.User;
@@ -47,7 +48,7 @@ public class MessageController {
 
     @GetMapping("/contact")
     public ResultVO<Object> getContactList(){
-        List<User> userList = null;
+        List<ContactUser> userList = null;
         try{
             userList = conversationService.getContactList(hostHolder.getUser().getId());
         }catch (NullPointerException e){

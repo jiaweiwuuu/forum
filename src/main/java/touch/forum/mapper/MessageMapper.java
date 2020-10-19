@@ -18,4 +18,5 @@ public interface MessageMapper {
     List<Message> getMessagesByConversationId(String conversationId);
 
 
+    List<Message> getMessageByIds(List<Integer> messageIds);
 }

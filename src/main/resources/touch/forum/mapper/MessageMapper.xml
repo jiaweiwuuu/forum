@@ -6,9 +6,11 @@
         <result property="createAt" column="create_at"/>
         <result property="conversationId" column="conversation_id"/>
         <result property="hasRead" column="has_read"/>
+        <result property="toId" column="to_id"/>
+        <result property="fromId" column="from_id"/>
     </resultMap>
 
-    <insert id="create" parameterType="touch.forum.entity.Message">
+    <insert id="create" parameterType="touch.forum.entity.Message" useGeneratedKeys="true" keyProperty="id">
         insert into message values (#{id},#{fromId},#{toId},#{content},#{createAt},#{hasRead},#{conversationId})
     </insert>
 
@@ -19,6 +21,13 @@
     <update id="messageRead">
         update message set has_read = true where conversation_id = #{conversationId}
     </update>
+
+    <select id="getMessageByIds" resultType="touch.forum.entity.Message" resultMap="messageMap">
+        select * from message where id in
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
 
 
 

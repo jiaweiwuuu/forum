@@ -17,7 +17,8 @@ public class MessageService {
 
     public int createMessage(String conversationId, String content, int fromId, int toId) {
         Message message = new Message().setHasRead(false).setCreateAt(Calendar.getInstance().getTime()).setFromId(fromId).setToId(toId).setContent(content);
-        return messageMapper.create(message.setConversationId(conversationId));
+        messageMapper.create(message.setConversationId(conversationId));
+        return message.getId();
     }
 
     public List<Message> getMessage(String conversationId){
@@ -27,5 +28,7 @@ public class MessageService {
     }
 
 
-
+    public List<Message> getMessageByIds(List<Integer> messageIds) {
+        return messageMapper.getMessageByIds(messageIds);
+    }
 }
