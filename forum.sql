@@ -98,7 +98,7 @@ CREATE TABLE `message` (
 
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
-INSERT INTO `message` VALUES (1,7,3,'hello','2020-08-15 20:30:39',0,'3-7'),(3,7,3,'I\'m a robot','2020-08-15 20:44:16',0,'3-7');
+INSERT INTO `message` VALUES (1,7,3,'hello','2020-08-15 20:30:39',0,'3-7'),(3,7,3,'Im a robot','2020-08-15 20:44:16',0,'3-7');
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 

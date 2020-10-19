@@ -25,8 +25,11 @@ public class UserService {
         User user = new User();
         user.setName(username).setSalt(UUID.randomUUID().toString().substring(0,5)).setHeadUrl(DEFAULT_HEAD_URL);
         user.setPassword(HashUtil.MD5(password+user.getSalt()));
-        String token = TicketUtil.setTicket(user,redisTemplate,false);
+        log.info("get user name when create [{}]",user.getName());
         userMapper.addUser(user);
+        user.setId(userMapper.getUserByName(username).getId());
+        String token = TicketUtil.setTicket(user,redisTemplate,false);
+//        userMapper.addUser(user);
         return token;
     }
 
