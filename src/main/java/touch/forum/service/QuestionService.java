@@ -12,8 +12,7 @@ import java.util.List;
 
 @Service
 public class QuestionService {
-    @Autowired
-    Calendar calendar;
+
     @Autowired
     private QuestionMapper questionMapper;
     public int createQuestion(String title, String content, User user){
@@ -24,7 +23,7 @@ public class QuestionService {
         if(user == null){
             throw new RuntimeException("user should login");
         }
-        Question question = new Question().setUserId(user.getId()).setTitle(title).setContent(content).setCommentCount(0).setCreateAt(calendar.getTime());
+        Question question = new Question().setUserId(user.getId()).setTitle(title).setContent(content).setCommentCount(0).setCreateAt(Calendar.getInstance().getTime());
 
         questionMapper.create(question);
         return question.getId();

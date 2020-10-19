@@ -17,4 +17,11 @@
     <select id="getUserByName" parameterType="String" resultType="touch.forum.entity.User" resultMap="userMap">
         select * from user where name = #{name}
     </select>
+
+    <select id="getUserByIds" resultType="touch.forum.entity.User" resultMap="userMap">
+        select * from user where id in
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
 </mapper>

@@ -15,6 +15,7 @@ public class ResponseUtil {
     public static ResultVO<Object> makeSuccessResponse(){
         return makeSuccessResponse(null);
     }
+
     public static ResultVO<Object> makeErrorResponse(){
         ResultVO<Object> response = new ResultVO<>();
         response.setCode(ResponseEnum.Error.getCode());
