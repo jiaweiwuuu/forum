@@ -2,7 +2,6 @@ package touch.forum.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-import touch.forum.entity.Comment;
 import touch.forum.entity.Message;
 
 import java.util.List;
@@ -14,5 +13,6 @@ public interface MessageMapper {
 
     List<Message> getMessagesByConversationId(String conversationId);
 
+    int addMessage(Message message);
 
 }
