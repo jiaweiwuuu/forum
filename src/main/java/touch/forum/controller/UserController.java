@@ -2,16 +2,25 @@ package touch.forum.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import touch.forum.ResultVO;
+import touch.forum.entity.HostHolder;
+import touch.forum.entity.Question;
+import touch.forum.entity.User;
 import touch.forum.service.UserService;
+import touch.forum.utils.ResponseUtil;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserService service;
+
+    @Autowired
+    private HostHolder hostHolder;
 
     @PostMapping("/signup")
     public String createUser(@RequestParam String username, @RequestParam String password, HttpServletResponse response) {
@@ -36,5 +45,11 @@ public class UserController {
             return e.getMessage();
         }
         return "login success";
+    }
+
+    @GetMapping("/userInfo")
+    public ResultVO<Object> GetUserInfo(){
+        User user = service.getUserInfo(hostHolder.getUser().getId());
+        return ResponseUtil.makeSuccessResponse(user);
     }
 }

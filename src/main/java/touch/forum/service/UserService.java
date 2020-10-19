@@ -5,11 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import touch.forum.entity.LoginTicket;
+import touch.forum.entity.Question;
 import touch.forum.entity.User;
 import touch.forum.mapper.UserMapper;
 import touch.forum.utils.HashUtil;
 import touch.forum.utils.TicketUtil;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -44,5 +46,9 @@ public class UserService {
         }
         String token = TicketUtil.setTicket(user,redisTemplate,rememberMe);
         return token;
+    }
+
+    public User getUserInfo(Integer id) {
+        return userMapper.getUserById(id);
     }
 }
