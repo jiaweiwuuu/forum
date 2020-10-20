@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import touch.forum.ResultVO;
+import touch.forum.consts.ResponseEnum;
 import touch.forum.entity.Question;
 import touch.forum.service.QuestionService;
 import touch.forum.utils.ResponseUtil;
@@ -19,8 +20,9 @@ public class MainPageController {
     QuestionService service;
 
     @GetMapping("/news")
-    public ResultVO<Object> GetNews(){
+    public ResultVO<Object> GetNews() {
         List<Question> questions = service.getAllQuestions();
+
         return ResponseUtil.makeSuccessResponse(questions);
     }
 }

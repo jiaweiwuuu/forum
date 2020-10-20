@@ -4,6 +4,7 @@ import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import touch.forum.ResultVO;
+import touch.forum.consts.ResponseEnum;
 import touch.forum.entity.ContactUser;
 import touch.forum.entity.HostHolder;
 import touch.forum.entity.Message;
@@ -29,7 +30,7 @@ public class MessageController {
             int result = conversationService.createConversation(hostHolder.getUser().getId(),toId,content);
         }
         catch (NullPointerException e){
-            return ResponseUtil.makeErrorResponse();
+            return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
         }
         return ResponseUtil.makeSuccessResponse();
     }
@@ -41,7 +42,7 @@ public class MessageController {
             messageList = conversationService.getMessage(hostHolder.getUser().getId(),toId);
         }
         catch (NullPointerException e){
-            return ResponseUtil.makeErrorResponse();
+            return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
         }
         return ResponseUtil.makeSuccessResponse(messageList);
     }
@@ -52,7 +53,7 @@ public class MessageController {
         try{
             userList = conversationService.getContactList(hostHolder.getUser().getId());
         }catch (NullPointerException e){
-            return ResponseUtil.makeErrorResponse();
+            return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
         }
         return ResponseUtil.makeSuccessResponse(userList);
     }

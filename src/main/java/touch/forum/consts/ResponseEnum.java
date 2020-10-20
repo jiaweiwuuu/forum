@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum ResponseEnum {
-    Success(0, "success"),Error(-1,"error");
+    Success(0, "success"),Error(-1,"error"), NotLoginError(-100,"not log in");
     private Integer code;
     private String message;
 

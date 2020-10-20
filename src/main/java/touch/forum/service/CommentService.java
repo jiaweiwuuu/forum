@@ -22,8 +22,8 @@ public class CommentService {
         return commentMapper.getCommentByEntityId(entityId,entityType);
     }
 
-    public int addComment(String content, int entityId, int entityType, User user){
-         Comment comment = new Comment().setContent(content).setCreateAt(Calendar.getInstance().getTime()).setEntityId(entityId).setEntityType(entityType).setUserId(user.getId());
+    public int addComment(String content, int entityId, int entityType, int userId){
+         Comment comment = new Comment().setContent(content).setCreateAt(Calendar.getInstance().getTime()).setEntityId(entityId).setEntityType(entityType).setUserId(userId);
          int i = commentMapper.create(comment);
          int count = commentMapper.getCommentCount(entityId,entityType);
          if(entityType == EntityEnum.QUESTION.getValue()) {
