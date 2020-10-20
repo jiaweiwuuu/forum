@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="touch.forum.mapper.ContactMapper">
+
+    <resultMap id="contactMap" type="touch.forum.entity.Contact">
+        <result property="createAt" column="create_at"/>
+        <result property="updateAt" column="update_at"/>
+        <result property="conversationId" column="conversation_id"/>
+        <result property="latestMessageId" column="latest_message_id"/>
+    </resultMap>
+
+    <insert id="addContact" parameterType="touch.forum.entity.Contact" useGeneratedKeys="true" keyProperty="id">
+        insert into contact_list values (#{id},#{conversationId},#{createAt},#{updateAt},#{latestMessageId})
+    </insert>
+
+    <update id="updateContact" parameterType="touch.forum.entity.Contact">
+        update contact_list set update_at = #{updateAt}, latest_message_id = #{latestMessageId} where conversation_id = #{conversationId}
+    </update>
+
+    <select id="getContact" resultType="touch.forum.entity.Contact" resultMap="contactMap">
+        select * from contact_list where conversation_id = #{conversationId}
+    </select>
+
+    <select id="getContactList" resultType="touch.forum.entity.Contact" resultMap="contactMap">
+        select * from contact_list where conversation_id like CONCAT("%_",#{id}) or conversation_id like CONCAT(#{id},"_%") order by update_at desc
+    </select>
+
+</mapper>

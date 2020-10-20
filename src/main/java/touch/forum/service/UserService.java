@@ -51,4 +51,8 @@ public class UserService {
     public User getUserInfo(Integer id) {
         return userMapper.getUserById(id);
     }
+
+    public List<User> getUserInfoByIds(List<Integer> ids){
+        return userMapper.getUserByIds(ids);
+    }
 }

@@ -3,6 +3,7 @@ package touch.forum.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import touch.forum.ResultVO;
+import touch.forum.consts.ResponseEnum;
 import touch.forum.entity.HostHolder;
 import touch.forum.entity.Question;
 import touch.forum.service.QuestionService;
@@ -23,7 +24,7 @@ public class QuestionController {
             id = service.createQuestion(title,content,hostHolder.getUser());
         }
         catch (Exception e){
-            return ResponseUtil.makeErrorResponse();
+            return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
         }
         return ResponseUtil.makeSuccessResponse(id);
 
@@ -32,6 +33,7 @@ public class QuestionController {
     @GetMapping("/detail")
     public ResultVO<Object> QuestionDetail(@RequestParam("qid") int id){
         Question question = service.getQuestion(id);
+
         return ResponseUtil.makeSuccessResponse(question);
     }
 

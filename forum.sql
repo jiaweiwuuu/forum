@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.18, for macos10.14 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.31, for Linux (x86_64)
 --
 -- Host: localhost    Database: forum
 -- ------------------------------------------------------
--- Server version	8.0.18
+-- Server version	5.7.31-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `comment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `comment` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `content` text,
@@ -32,7 +32,7 @@ CREATE TABLE `comment` (
   PRIMARY KEY (`id`),
   KEY `comment_user_id_fk` (`user_id`),
   CONSTRAINT `comment_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,8 +41,36 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (3,'this is a comment',15,0,'2020-08-15 19:38:32',3),(4,'this is a comment again',15,0,'2020-08-15 19:38:47',3),(5,'this is my comment',15,0,'2020-08-15 19:53:46',7),(6,'this is my comment',15,0,'2020-08-15 19:53:46',7),(7,'this is my comment',15,0,'2020-08-15 20:05:18',7),(8,'this is my comment again',15,0,'2020-08-16 21:48:21',7),(9,'this is my comment again hhh',15,0,'2020-08-16 21:48:21',7),(10,'comment comment comment',15,0,'2020-08-16 21:48:21',7),(11,'comment comment comment',15,0,'2020-08-16 21:48:21',8),(12,'comment comment comment',15,0,'2020-08-16 21:48:21',8),(13,'comment comment comment',15,0,'2020-08-16 21:48:21',8),(14,'comment comment comment',15,0,'2020-08-16 21:48:21',8),(15,'comment comment comment',15,0,'2020-08-16 22:04:02',7),(16,'comment comment comment',15,0,'2020-08-16 22:04:02',7),(17,'comment comment comment',15,0,'2020-08-16 22:07:23',7),(18,'comment comment comment',15,0,'2020-08-16 22:07:23',7),(19,'comment comment comment',15,0,'2020-08-16 22:07:23',8),(20,'comment comment comment',15,0,'2020-08-16 22:07:23',8),(21,'comment comment comment',15,0,'2020-08-16 22:09:05',8),(22,'comment comment comment',15,0,'2020-08-16 22:09:05',8);
+INSERT INTO `comment` VALUES (24,'this is a comment 11',4,0,'2020-10-18 23:40:01',17),(25,'this is a comment 11',5,0,'2020-10-19 18:00:53',21);
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contact_list`
+--
+
+DROP TABLE IF EXISTS `contact_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_list` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `conversation_id` varchar(1238) NOT NULL,
+  `create_at` datetime NOT NULL,
+  `update_at` datetime NOT NULL,
+  `latest_message_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `date_index` (`create_at`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact_list`
+--
+
+LOCK TABLES `contact_list` WRITE;
+/*!40000 ALTER TABLE `contact_list` DISABLE KEYS */;
+INSERT INTO `contact_list` VALUES (1,'17-19','2020-10-20 03:28:26','2020-10-20 03:29:12',2),(2,'17-20','2020-10-20 03:47:30','2020-10-20 03:47:30',3),(3,'17-22','2020-10-20 03:49:56','2020-10-20 03:49:56',4);
+/*!40000 ALTER TABLE `contact_list` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -51,7 +79,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `feed`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `feed` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` int(11) DEFAULT NULL,
@@ -69,7 +97,6 @@ CREATE TABLE `feed` (
 
 LOCK TABLES `feed` WRITE;
 /*!40000 ALTER TABLE `feed` DISABLE KEYS */;
-INSERT INTO `feed` VALUES (3,1,8,'2020-08-16 21:48:21','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"7\"}'),(4,1,8,'2020-08-16 21:48:21','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"7\"}'),(5,1,8,'2020-08-16 21:48:21','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"7\"}'),(6,1,8,'2020-08-16 21:48:21','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(7,1,8,'2020-08-16 21:48:21','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(8,1,8,'2020-08-16 21:48:21','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(9,1,8,'2020-08-16 21:48:21','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(10,1,7,'2020-08-16 22:07:23','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"7\"}'),(11,1,7,'2020-08-16 22:07:23','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"7\"}'),(12,1,7,'2020-08-16 22:07:23','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"7\"}'),(13,1,7,'2020-08-16 22:07:23','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"7\"}'),(14,1,8,'2020-08-16 22:07:23','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(15,1,8,'2020-08-16 22:07:23','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(16,1,8,'2020-08-16 22:09:05','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(17,1,8,'2020-08-16 22:09:05','{\"questionId\":\"15\",\"questionTitle\":\"first question\",\"userId\":\"8\"}'),(18,1,2,'2020-08-16 22:33:36','test'),(19,1,2,'2020-08-16 22:33:59','test'),(20,1,2,'2020-09-02 22:50:44','test');
 /*!40000 ALTER TABLE `feed` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +106,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `message`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `message` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `from_id` int(10) unsigned DEFAULT NULL,
@@ -89,7 +116,7 @@ CREATE TABLE `message` (
   `has_read` tinyint(1) DEFAULT NULL,
   `conversation_id` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +125,7 @@ CREATE TABLE `message` (
 
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
-INSERT INTO `message` VALUES (1,7,3,'hello','2020-08-15 20:30:39',0,'3-7'),(3,7,3,'Im a robot','2020-08-15 20:44:16',0,'3-7');
+INSERT INTO `message` VALUES (1,17,19,'hello','2020-10-20 03:28:11',1,'17-19'),(2,17,19,'hello again','2020-10-20 03:28:53',1,'17-19'),(3,17,20,'hello first','2020-10-20 03:47:29',0,'17-20'),(4,22,17,'hello first','2020-10-20 03:49:55',0,'17-22');
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,7 +135,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `question`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `question` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -120,7 +147,7 @@ CREATE TABLE `question` (
   KEY `date_index` (`create_at`),
   KEY `question_user_id_fk` (`user_id`),
   CONSTRAINT `question_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +156,6 @@ CREATE TABLE `question` (
 
 LOCK TABLES `question` WRITE;
 /*!40000 ALTER TABLE `question` DISABLE KEYS */;
-INSERT INTO `question` VALUES (1,'test','test Content',3,'2020-08-14 22:34:58',0),(2,'test0','test Content0',3,'2020-08-14 22:54:48',0),(3,'test1','test Content1',3,'2020-08-14 22:54:48',0),(4,'test2','test Content2',3,'2020-08-14 22:54:48',0),(5,'test3','test Content3',3,'2020-08-14 22:54:48',0),(6,'test4','test Content4',3,'2020-08-14 22:54:48',0),(7,'test5','test Content5',3,'2020-08-14 22:54:48',0),(8,'test6','test Content6',3,'2020-08-14 22:54:48',0),(9,'test7','test Content7',3,'2020-08-14 22:54:48',0),(10,'test8','test Content8',3,'2020-08-14 22:54:48',0),(11,'test9','test Content9',3,'2020-08-14 22:54:48',0),(12,'ss','11',3,'2020-08-15 01:02:20',0),(13,'ss','11',3,'2020-08-15 14:38:37',0),(14,'first question','shuai shuai shuai',7,'2020-08-15 16:46:10',0),(15,'first question','shuai shuai shuai',7,'2020-08-15 16:52:08',20);
 /*!40000 ALTER TABLE `question` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +165,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
@@ -148,7 +174,7 @@ CREATE TABLE `user` (
   `head_url` varchar(256) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index2` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,7 +183,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*INSERT INTO `user` VALUES (3,'jiawei','123','adsfafd','asdfasf',0),(4,'name','123','s','1',0),(5,'nae','111','sss','head',0),(6,'jiawei123','F8F834832E90878C3D815C97E9600B73','6b78c','www.baidu.com',0),(7,'jiaweiwu7','9FA03476A55A46FB77C2112350408A10','ca43f','www.baidu.com',0),(8,'jiaweiwu1','D9E315F8C3E03EA00DDC423CD85D65AD','f075e','www.baidu.com',0),(9,'a','aaa','aaa','aaa',90),(10,'a','aaa','aaa','aaa',90),(11,'b','aaa','aaa','aaa',80),(12,'b','aaa','aaa','aaa',80),(13,'a','aaa','aaa','aaa',90),(14,'a','aaa','aaa','aaa',90),(15,'b','aaa','aaa','aaa',80),(16,'b','aaa','aaa','aaa',80);
+INSERT INTO `user` VALUES (17,'jiaweiw1','27487CD84C440534F2773997DA010815','e944b','www.baidu.com'),(18,'jiawei123','AA7A6AD7CA50385CF239A0EEC0B468E0','25f99','www.baidu.com'),(19,'yzy','43FE6D90EBF3D3EC2BDEF6600F47C380','eaa70','www.baidu.com'),(20,'yzy2','4088AEA98769FACFF75A8E0A2F177C14','5fd6f','www.baidu.com'),(21,'yzy3','F4428E356359E126A71D8CD9F1A8AE75','a8cf4','www.baidu.com'),(22,'wjw','893C60ECBE5C791EFD092D54DAF626A9','81c50','www.baidu.com');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -170,4 +196,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-18 15:11:59
+-- Dump completed on 2020-10-20  4:42:53

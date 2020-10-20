@@ -1,8 +1,10 @@
 package touch.forum.controller;
 
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import touch.forum.ResultVO;
+import touch.forum.consts.ResponseEnum;
 import touch.forum.entity.HostHolder;
 import touch.forum.entity.Question;
 import touch.forum.entity.User;
@@ -49,7 +51,14 @@ public class UserController {
 
     @GetMapping("/userInfo")
     public ResultVO<Object> GetUserInfo(){
-        User user = service.getUserInfo(hostHolder.getUser().getId());
+        User user = null;
+        try{
+            user = service.getUserInfo(hostHolder.getUser().getId());
+        }
+        catch (NullPointerException e){
+            return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
+        }
+
         return ResponseUtil.makeSuccessResponse(user);
     }
 }

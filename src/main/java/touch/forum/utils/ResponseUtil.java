@@ -15,10 +15,11 @@ public class ResponseUtil {
     public static ResultVO<Object> makeSuccessResponse(){
         return makeSuccessResponse(null);
     }
-    public static ResultVO<Object> makeErrorResponse(){
+
+    public static ResultVO<Object> makeErrorResponse(ResponseEnum responseEnum){
         ResultVO<Object> response = new ResultVO<>();
-        response.setCode(ResponseEnum.Error.getCode());
-        response.setMsg(ResponseEnum.Error.getMessage());
+        response.setCode(responseEnum.getCode());
+        response.setMsg(responseEnum.getMessage());
         return response;
     }
 }

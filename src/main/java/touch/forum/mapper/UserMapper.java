@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import touch.forum.entity.User;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface UserMapper {
@@ -14,4 +16,6 @@ public interface UserMapper {
     User getUserByName(String name);
 
     int updatePassword(User user);
+
+    List<User> getUserByIds(List<Integer> ids);
 }

@@ -10,9 +10,13 @@ import java.util.List;
 @Mapper
 @Repository
 public interface MessageMapper {
+
     int create(Message message);
+
+    int messageRead(String conversationId);
 
     List<Message> getMessagesByConversationId(String conversationId);
 
 
+    List<Message> getMessageByIds(List<Integer> messageIds);
 }
