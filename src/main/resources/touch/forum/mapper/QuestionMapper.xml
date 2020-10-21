@@ -5,6 +5,7 @@
     <resultMap id="questionMap" type="touch.forum.entity.Question">
         <result property="createAt" column="create_at"/>
         <result property="commentCount" column="comment_count"/>
+        <result property="userId" column="user_id"/>
     </resultMap>
 
     <insert id="create" parameterType="touch.forum.entity.Question" useGeneratedKeys="true" keyProperty="id">
