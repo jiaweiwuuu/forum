@@ -3,6 +3,7 @@ package touch.forum.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import touch.forum.entity.Question;
+import touch.forum.entity.QuestionImage;
 
 import java.util.List;
 
@@ -18,4 +19,6 @@ public interface QuestionMapper {
 
     int update(Question question);
 
+
+    void insertImage(QuestionImage image);
 }

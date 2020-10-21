@@ -38,10 +38,6 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 
---
--- Table structure for table `question`
---
-
 DROP TABLE IF EXISTS `question`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -60,6 +56,22 @@ CREATE TABLE `question` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+--
+-- Table structure for table `question_image`
+--
+
+DROP TABLE IF EXISTS `question_image`;
+
+CREATE TABLE `question_image` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `question_id` int(11) unsigned NOT NULL,
+  `image_url` varchar(255),
+  PRIMARY KEY (`id`),
+  KEY `question_image_user_id_fk` (`question_id`),
+  CONSTRAINT `question_image_user_id_fk` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `message`
@@ -188,7 +200,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
-INSERT INTO `message` VALUES (1,17,19,'hello','2020-10-20 03:28:11',1,'17-19',''),(2,17,19,'hello again','2020-10-20 03:28:53',1,'17-19',''),(3,17,20,'hello first','2020-10-20 03:47:29',0,'17-20',''),(4,22,17,'hello first','2020-10-20 03:49:55',0,'17-22','');
+INSERT INTO `message` VALUES (1,17,19,'hello','2020-10-20 03:28:11',1,'','17-19'),(2,17,19,'hello again','2020-10-20 03:28:53',1,'', '17-19'),(3,17,20,'hello first','2020-10-20 03:47:29',0,'','17-20'),(4,22,17,'hello first','2020-10-20 03:49:55',0,'','17-22');
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 
