@@ -3,10 +3,11 @@
 <mapper namespace="touch.forum.mapper.CommentMapper">
 
     <resultMap id="commentMap" type="touch.forum.entity.Comment">
+        <result property="entityId" column="entity_id"/>
+        <result property="entityType" column="entity_type"/>
         <result property="createAt" column="create_at"/>
         <result property="userId" column="user_id"/>
     </resultMap>
-
 
     <select id="getCommentById" resultType="touch.forum.entity.Comment" resultMap="commentMap">
         select * from comment where id = #{id}

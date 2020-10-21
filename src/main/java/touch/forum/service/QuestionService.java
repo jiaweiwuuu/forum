@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 import touch.forum.entity.Question;
+import touch.forum.entity.QuestionImage;
 import touch.forum.entity.User;
 import touch.forum.mapper.QuestionMapper;
 
@@ -39,5 +40,10 @@ public class QuestionService {
 
     public int updateQuestion(Question question){
         return questionMapper.update(question);
+    }
+
+    public void insertQuestionImage(int questionId, String imageUrl) {
+        QuestionImage image = new QuestionImage().setQuesionId(questionId).setImageUrl(imageUrl);
+        questionMapper.insertImage(image);
     }
 }
