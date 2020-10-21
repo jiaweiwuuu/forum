@@ -50,9 +50,13 @@ public class ConversationService {
             userIds.add(ConversationUtil.getContacterId(String.valueOf(fromId),contact.getConversationId()));
             messageIds.add(contact.getLatestMessageId());
         }
+        List<User> userList = new ArrayList<>();
+        List<Message> messageList = new ArrayList<>();
+        if(userIds.size() != 0){
+            userList = userService.getUserInfoByIds(userIds);
+            messageList = messageService.getMessageByIds(messageIds);
+        }
 
-        List<User> userList = userService.getUserInfoByIds(userIds);
-        List<Message> messageList = messageService.getMessageByIds(messageIds);
         userList.sort(new Comparator<User>() {
             @Override
             public int compare(User o1, User o2) {
