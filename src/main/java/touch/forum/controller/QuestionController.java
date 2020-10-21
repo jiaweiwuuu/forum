@@ -24,6 +24,7 @@ public class QuestionController {
             id = service.createQuestion(title,content,hostHolder.getUser());
         }
         catch (Exception e){
+            e.printStackTrace();
             return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
         }
         return ResponseUtil.makeSuccessResponse(id);

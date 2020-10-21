@@ -29,10 +29,9 @@ public class CommentController {
         try {
             id = commentService.addComment(content, entityId, entityType, hostHolder.getUser().getId());
         } catch (NullPointerException e) {
+            e.printStackTrace();
             return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
         }
-
-
         return ResponseUtil.makeSuccessResponse(id);
     }
 

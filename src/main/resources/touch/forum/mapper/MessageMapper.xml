@@ -8,10 +8,11 @@
         <result property="hasRead" column="has_read"/>
         <result property="toId" column="to_id"/>
         <result property="fromId" column="from_id"/>
+        <result property="imageUrl" column="image_url"/>
     </resultMap>
 
     <insert id="create" parameterType="touch.forum.entity.Message" useGeneratedKeys="true" keyProperty="id">
-        insert into message values (#{id},#{fromId},#{toId},#{content},#{createAt},#{hasRead},#{conversationId})
+        insert into message values (#{id},#{fromId},#{toId},#{content},#{createAt},#{hasRead},#{imageUrl},#{conversationId})
     </insert>
 
     <select id="getMessagesByConversationId" resultType="touch.forum.entity.Message" resultMap="messageMap">

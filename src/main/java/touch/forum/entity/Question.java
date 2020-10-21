@@ -17,4 +17,5 @@ public class Question {
     private int userId;
     private Date createAt;
     private int commentCount;
+    private String imageUrl;
 }

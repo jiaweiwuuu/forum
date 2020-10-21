@@ -74,4 +74,17 @@ public class ConversationService {
         }
         return contactUserList;
     }
+
+    public int createConversationWithImage(int fromId, Integer toId, String imageUrl) {
+        String conversationId = ConversationUtil.getConversationId(fromId,toId);
+
+        int messageId = messageService.createMessageWithImage(conversationId,imageUrl, fromId,toId);
+        List<Contact> contact = contactService.getContact(conversationId);
+        if(contact.size() == 0){
+            return contactService.addContact(conversationId,messageId);
+        }
+        else{
+            return contactService.updateContact(contact.get(0).setLatestMessageId(messageId));
+        }
+    }
 }

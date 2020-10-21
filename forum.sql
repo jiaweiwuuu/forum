@@ -114,6 +114,7 @@ CREATE TABLE `message` (
   `content` text,
   `create_at` datetime DEFAULT NULL,
   `has_read` tinyint(1) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT '',
   `conversation_id` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
@@ -125,7 +126,7 @@ CREATE TABLE `message` (
 
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
-INSERT INTO `message` VALUES (1,17,19,'hello','2020-10-20 03:28:11',1,'17-19'),(2,17,19,'hello again','2020-10-20 03:28:53',1,'17-19'),(3,17,20,'hello first','2020-10-20 03:47:29',0,'17-20'),(4,22,17,'hello first','2020-10-20 03:49:55',0,'17-22');
+INSERT INTO `message` VALUES (1,17,19,'hello','2020-10-20 03:28:11',1,'17-19',''),(2,17,19,'hello again','2020-10-20 03:28:53',1,'17-19',''),(3,17,20,'hello first','2020-10-20 03:47:29',0,'17-20',''),(4,22,17,'hello first','2020-10-20 03:49:55',0,'17-22','');
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,6 +144,7 @@ CREATE TABLE `question` (
   `user_id` int(11) unsigned NOT NULL,
   `create_at` datetime NOT NULL,
   `comment_count` int(11) NOT NULL,
+  `image_url` varchar(255),
   PRIMARY KEY (`id`),
   KEY `date_index` (`create_at`),
   KEY `question_user_id_fk` (`user_id`),

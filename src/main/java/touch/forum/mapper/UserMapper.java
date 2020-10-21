@@ -18,4 +18,6 @@ public interface UserMapper {
     int updatePassword(User user);
 
     List<User> getUserByIds(List<Integer> ids);
+
+    void updateUser(User u);
 }

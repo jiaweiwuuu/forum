@@ -15,4 +15,5 @@ public class Message {
     private Date createAt;
     private boolean hasRead;
     private String conversationId;
+    private String imageUrl;
 }

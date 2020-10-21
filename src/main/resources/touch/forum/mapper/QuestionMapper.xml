@@ -8,7 +8,8 @@
     </resultMap>
 
     <insert id="create" parameterType="touch.forum.entity.Question" useGeneratedKeys="true" keyProperty="id">
-        insert into question values (#{id},#{title},#{content},#{userId},#{createAt},#{commentCount})
+        insert into question (title,content, user_id, create_at, comment_count, image_url)
+        values (#{title},#{content},#{userId},#{createAt},#{commentCount}, #{imageUrl});
     </insert>
 
     <select id="getQuestion" resultType="touch.forum.entity.Question" resultMap="questionMap">

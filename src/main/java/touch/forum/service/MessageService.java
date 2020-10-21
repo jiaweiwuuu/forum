@@ -31,4 +31,10 @@ public class MessageService {
     public List<Message> getMessageByIds(List<Integer> messageIds) {
         return messageMapper.getMessageByIds(messageIds);
     }
+
+    public int createMessageWithImage(String conversationId, String imageUrl, int fromId, Integer toId) {
+        Message message = new Message().setHasRead(false).setCreateAt(Calendar.getInstance().getTime()).setFromId(fromId).setToId(toId).setImageUrl(imageUrl);
+        messageMapper.create(message.setConversationId(conversationId));
+        return message.getId();
+    }
 }

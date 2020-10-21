@@ -24,4 +24,9 @@
             #{id}
         </foreach>
     </select>
+
+    <update id="updateUser" parameterType="touch.forum.entity.User">
+        UPDATE user SET head_url=#{headUrl} where id = #{id}
+    </update>
+
 </mapper>
