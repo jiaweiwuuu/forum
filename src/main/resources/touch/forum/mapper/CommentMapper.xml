@@ -4,6 +4,7 @@
 
     <resultMap id="commentMap" type="touch.forum.entity.Comment">
         <result property="createAt" column="create_at"/>
+        <result property="userId" column="user_id"/>
     </resultMap>
 
 
