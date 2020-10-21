@@ -38,6 +38,4 @@ public class QuestionController {
         return ResponseUtil.makeSuccessResponse(question);
     }
 
-
-
 }
