@@ -34,6 +34,10 @@ public class QuestionService {
         return questionMapper.getQuestionById(id);
     }
 
+    public List<Question> getQuestionByUserId(int uid){
+        return questionMapper.getQuestionByUserId(uid);
+    }
+
     public List<Question> getAllQuestions(){
         return questionMapper.getAllQuestions();
     }

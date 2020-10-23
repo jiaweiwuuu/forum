@@ -50,6 +50,7 @@ public class UserService {
     public String login(String username, String password, boolean rememberMe) throws UserNotExistException, IncorrectPasswordException {
         User user = userMapper.getUserByName(username);
         if(user == null){
+            log.info("user not exists for {}", username);
             throw new UserNotExistException();
         }
         String expectedPsw = HashUtil.MD5(password + user.getSalt());

@@ -11,6 +11,8 @@ import touch.forum.service.QuestionService;
 import touch.forum.utils.FileUtil;
 import touch.forum.utils.ResponseUtil;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
@@ -65,5 +67,14 @@ public class QuestionController {
 
         return ResponseUtil.makeSuccessResponse(question);
     }
+
+    @GetMapping("/newsDetailByUserId")
+    public ResultVO<Object> QuestionDetailByUserId(@RequestParam("uid") int uid){
+        List<Question> questions = service.getQuestionByUserId(uid);
+        return ResponseUtil.makeSuccessResponse(questions);
+    }
+
+
+
 
 }

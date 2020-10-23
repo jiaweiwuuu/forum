@@ -28,8 +28,8 @@
             values (#{quesionId}, #{imageUrl})
     </insert>
 
-    <select id="getQuestion" resultType="touch.forum.entity.Question" resultMap="questionMap">
-        select * from question where user_id = #{userId} order by id desc limit #{offset},#{limit}
+    <select id="getQuestionByUserId" resultType="touch.forum.entity.Question" resultMap="questionMap">
+        select * from question where user_id = #{userId} order by id desc
     </select>
 
     <select id="getAllQuestions" resultType="touch.forum.entity.Question" resultMap="questionMap">

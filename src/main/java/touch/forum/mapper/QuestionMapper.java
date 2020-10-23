@@ -10,7 +10,9 @@ import java.util.List;
 @Mapper
 @Repository
 public interface QuestionMapper {
-    List<Question> getQuestion(int userId, int offset, int limit);
+//    List<Question> getQuestionByUserId(int userId, int offset, int limit);
+
+    List<Question> getQuestionByUserId(int userId);
 
     List<Question> getAllQuestions();
 
@@ -21,4 +23,5 @@ public interface QuestionMapper {
 
 
     void insertImage(QuestionImage image);
+
 }

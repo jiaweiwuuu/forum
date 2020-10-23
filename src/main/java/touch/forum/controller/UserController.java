@@ -61,7 +61,6 @@ public class UserController {
                             @RequestParam String password,
                             @RequestParam(value = "rememberme", defaultValue = "false") boolean rememberMe,
                             HttpServletResponse response) {
-
         try {
             String token = service.login(username, password, rememberMe);
             Cookie cookie = new Cookie("token", token);
