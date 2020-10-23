@@ -1,5 +1,6 @@
 package touch.forum.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
@@ -8,10 +9,12 @@ import touch.forum.entity.QuestionImage;
 import touch.forum.entity.User;
 import touch.forum.mapper.QuestionMapper;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 @Service
+@Slf4j
 public class QuestionService {
 
     @Autowired
@@ -31,15 +34,35 @@ public class QuestionService {
     }
 
     public Question getQuestion(int id){
-        return questionMapper.getQuestionById(id);
+        Question q=  questionMapper.getQuestionById(id);
+        ArrayList<QuestionImage> images = q.getImages();
+        if (images.size()==1 && images.get(0).getImageUrl()==null){
+            log.info("imageurl in null is {}", images.get(0).getImageUrl() );
+            q.setImages(new ArrayList<>());
+        }
+        return q;
     }
 
     public List<Question> getQuestionByUserId(int uid){
-        return questionMapper.getQuestionByUserId(uid);
+        List<Question> qs = questionMapper.getQuestionByUserId(uid);
+        // 因为自动映射的时候，会映射一个有默认值的image， 下面的语句改为空；
+        return removeNullImage(qs);
+    }
+
+    private List<Question> removeNullImage(List<Question> qs){
+        for (Question q: qs){
+            ArrayList<QuestionImage> images = q.getImages();
+            if (images.size()==1 && images.get(0).getImageUrl()==null){
+                q.setImages(new ArrayList<>());
+            }
+        }
+        return qs;
     }
 
     public List<Question> getAllQuestions(){
-        return questionMapper.getAllQuestions();
+        List<Question> qs = questionMapper.getAllQuestions();
+        // 因为自动映射的时候，会映射一个有默认值的image， 下面的语句改为空；
+        return removeNullImage(qs);
     }
 
     public int updateQuestion(Question question){

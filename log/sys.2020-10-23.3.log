@@ -1,0 +1,16 @@
+2020-10-23 14:57:59,389 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-23 14:57:59,401 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-10-23 14:57:59,408 INFO (FrameworkServlet.java:547)- Completed initialization in 7 ms
+2020-10-23 14:57:59,426 INFO (PassportInterceptor.java:40)- get token [db169625f1ba40378b54b5fc361dd43e]
+2020-10-23 14:57:59,648 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-10-23 14:57:59,688 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-10-23 14:58:02,243 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-10-23 14:58:02,460 INFO (QuestionService.java:40)- imageurl in null is null
+2020-10-23 15:00:03,880 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-23 15:00:03,881 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-10-23 15:00:03,889 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-10-23 15:00:07,831 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on yaozhiyuandeMacBook-Pro.local with PID 79234 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-23 15:00:07,834 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-23 15:00:08,388 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-23 15:00:08,391 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-23 15:00:08,416 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
