@@ -1,0 +1,5 @@
+2020-10-23 10:57:04,413 WARN (FreeMarkerAutoConfiguration.java:67)- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-10-23 10:57:04,455 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8000"]
+2020-10-23 10:57:04,470 INFO (TomcatWebServer.java:220)- Tomcat started on port(s): 8000 (http) with context path '/forum'
+2020-10-23 10:57:04,480 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.233 seconds (JVM running for 2.776)
+2020-10-23 11:01:51,970 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'

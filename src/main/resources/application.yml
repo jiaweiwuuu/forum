@@ -19,3 +19,6 @@ spring:
 mybatis:
   mapper-locations: classpath:touch/forum/mapper/*.xml
   type-aliases-package: touch.forum.entity
+
+logging:
+  config: classpath:logback-boot.xml

@@ -1,0 +1,12 @@
+2020-10-23 10:57:02,611 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on 192.168.5.54 with PID 77744 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-23 10:57:02,613 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-23 10:57:03,146 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-23 10:57:03,148 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-23 10:57:03,169 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2020-10-23 10:57:03,528 INFO (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8000 (http)
+2020-10-23 10:57:03,538 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8000"]
+2020-10-23 10:57:03,538 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2020-10-23 10:57:03,538 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-10-23 10:57:03,609 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2020-10-23 10:57:03,609 INFO (ServletWebServerApplicationContext.java:285)- Root WebApplicationContext: initialization completed in 957 ms
+2020-10-23 10:57:04,154 INFO (ExecutorConfigurationSupport.java:181)- Initializing ExecutorService 'applicationTaskExecutor'
