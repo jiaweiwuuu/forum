@@ -17,7 +17,7 @@ public class TicketUtil {
         loginTicket.setUserId(user.getId());
         loginTicket.setUsername(user.getName());
         String token = UUID.randomUUID().toString().replaceAll("-","");
-        template.opsForValue().set(token,loginTicket,timeout, TimeUnit.SECONDS);
+        template.opsForValue().set(token,loginTicket,timeout, TimeUnit.HOURS);
         return token;
     }
 }
