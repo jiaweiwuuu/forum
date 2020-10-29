@@ -10,6 +10,7 @@ public enum ResponseEnum {
     UserNameExist(-2, "username exist"),
     UserNotExist(-3, "user not exist"),
     IncorrectPassword(-4, "incorrect password"),
+    VerificationError(-5,"verification code is error"),
     NotLoginError(-100,"not log in");
 
     private Integer code;

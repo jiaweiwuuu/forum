@@ -29,12 +29,6 @@ public class TicketUtil {
 
 
     public static void addShakeUser(User user, RedisTemplate template){
-//        value: String, list,map, set Lset,
-        // 获取所有
-//        Set members = template.opsForSet().members(SHAKE);
-//        LoginTicket loginTicket = new LoginTicket();
-//        loginTicket.setUserId(user.getId());
-//        loginTicket.setUsername(user.getName());
         template.opsForSet().add(SHAKE, user);
         template.expire(SHAKE,SHAKE_TIME, TimeUnit.SECONDS);
 
@@ -53,4 +47,5 @@ public class TicketUtil {
         }
         return null;
     }
+
 }

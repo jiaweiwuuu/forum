@@ -1,0 +1,9 @@
+2020-10-29 23:58:37,029 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=120.3, latitude=30.4)]
+2020-10-29 23:58:37,030 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 23:58:37,966 INFO (UserService.java:128)- send email success!
+2020-10-29 23:58:47,600 INFO (PassportInterceptor.java:40)- get token [eacbeac678594b35aafda12049a8fab5]
+2020-10-29 23:58:47,601 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-10-29 23:58:48,057 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=120.3, latitude=30.4)]
+2020-10-29 23:58:48,057 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 23:58:48,058 INFO (UserController.java:170)- --------------get---------
+2020-10-29 23:58:48,059 INFO (UserController.java:171)- get code412344

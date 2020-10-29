@@ -1,0 +1,9 @@
+2020-10-29 23:55:09,282 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-10-29 23:55:09,290 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-10-29 23:55:13,249 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on 192.168.5.54 with PID 2088 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-29 23:55:13,252 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-29 23:55:13,692 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-29 23:55:13,693 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-29 23:55:13,721 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2020-10-29 23:55:14,151 INFO (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8000 (http)
+2020-10-29 23:55:14,158 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8000"]

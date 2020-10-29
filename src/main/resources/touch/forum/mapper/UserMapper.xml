@@ -7,7 +7,7 @@
     </resultMap>
 
     <insert id="addUser" parameterType="touch.forum.entity.User" useGeneratedKeys="true" keyProperty="id">
-        insert into user values (#{id},#{name},#{password},#{salt},#{headUrl})
+        insert into user (id, name, password, salt, head_url)values (#{id},#{name},#{password},#{salt},#{headUrl})
     </insert>
 
     <select id="getUserById" parameterType="int" resultType="touch.forum.entity.User" resultMap="userMap">
@@ -34,9 +34,8 @@
     </update>
 
     <update id="updateUserLocation" parameterType="touch.forum.entity.User">
-        UPDATE user SET head_url=#{longitude}, latitude = #{latitude} where id = #{id}
+        UPDATE user SET longitude=#{longitude}, latitude = #{latitude} where id = #{id}
     </update>
-
 
 
 </mapper>

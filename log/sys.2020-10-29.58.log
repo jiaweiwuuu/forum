@@ -1,0 +1,10 @@
+2020-10-29 23:55:23,349 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-29 23:55:23,351 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-10-29 23:55:23,359 INFO (FrameworkServlet.java:547)- Completed initialization in 7 ms
+2020-10-29 23:55:23,372 INFO (PassportInterceptor.java:40)- get token [eacbeac678594b35aafda12049a8fab5]
+2020-10-29 23:55:23,598 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-10-29 23:55:23,612 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-10-29 23:55:28,779 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-10-29 23:55:29,047 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=120.3, latitude=30.4)]
+2020-10-29 23:55:29,048 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 23:55:30,109 INFO (UserService.java:128)- send email success!

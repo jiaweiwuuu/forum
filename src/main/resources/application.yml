@@ -15,6 +15,18 @@ spring:
     host: localhost
     port: 6379
     database: 0
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    username: 1197150065@qq.com
+    password: surlashrixtvhjca
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
 
 mybatis:
   mapper-locations: classpath:touch/forum/mapper/*.xml

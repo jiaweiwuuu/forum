@@ -1,0 +1,7 @@
+2020-10-30 00:00:08,072 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.124 seconds (JVM running for 2.614)
+2020-10-30 00:00:24,250 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 00:00:26,451 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on 192.168.5.54 with PID 2130 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-30 00:00:26,454 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-30 00:00:27,016 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-30 00:00:27,018 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-30 00:00:27,048 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
