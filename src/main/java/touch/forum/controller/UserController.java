@@ -104,7 +104,7 @@ public class UserController {
             log.error("download file exception [{}]",e.getMessage());
             return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
         }
-
+        log.info("upload image success!");
         return ResponseUtil.makeSuccessResponse();
     }
 
