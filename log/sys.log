@@ -1,11 +1,1 @@
-2020-10-23 15:06:25,368 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.296 seconds (JVM running for 2.835)
-2020-10-23 15:07:03,587 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-23 15:07:03,588 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
-2020-10-23 15:07:03,595 INFO (FrameworkServlet.java:547)- Completed initialization in 7 ms
-2020-10-23 15:07:03,611 INFO (PassportInterceptor.java:40)- get token [db169625f1ba40378b54b5fc361dd43e]
-2020-10-23 15:07:03,991 INFO (LoginRequireInterceptor.java:21)- not logged in
-2020-10-23 15:07:04,012 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2020-10-23 15:07:06,120 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
-2020-10-23 15:07:25,416 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-23 15:07:25,417 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
-2020-10-23 15:07:25,424 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-10-29 16:25:14,494 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.

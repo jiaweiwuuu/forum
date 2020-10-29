@@ -1,0 +1,9 @@
+2020-10-29 14:46:48,883 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 14:49:44,321 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-29 14:49:44,322 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-10-29 14:49:44,329 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-10-29 14:49:47,617 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on 192.168.5.54 with PID 98923 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-29 14:49:47,620 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-29 14:49:48,121 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-29 14:49:48,124 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-29 14:49:48,150 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.

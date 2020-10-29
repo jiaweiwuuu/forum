@@ -1,0 +1,10 @@
+2020-10-29 16:19:00,389 INFO (PassportInterceptor.java:40)- get token [eacbeac678594b35aafda12049a8fab5]
+2020-10-29 16:19:00,392 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-10-29 16:19:00,750 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=120.3, longitude=120.3, latitude=30.44)]
+2020-10-29 16:19:00,750 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 16:19:08,043 INFO (PassportInterceptor.java:40)- get token [eacbeac678594b35aafda12049a8fab5]
+2020-10-29 16:19:08,044 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-10-29 16:19:08,396 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=120.3, longitude=120.3, latitude=30.16)]
+2020-10-29 16:19:08,397 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 16:25:14,487 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-29 16:25:14,488 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...

@@ -15,6 +15,7 @@ import touch.forum.mapper.UserMapper;
 import touch.forum.utils.HashUtil;
 import touch.forum.utils.TicketUtil;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -72,5 +73,34 @@ public class UserService {
     public void insertUser(String headUrl) {
         User u = new User().setHeadUrl(headUrl).setId(hostHolder.getUser().getId());
         userMapper.updateUser(u);
+    }
+
+    public User addAndGetShakeUser() throws InterruptedException {
+        TicketUtil.addShakeUser(hostHolder.getUser(),redisTemplate );
+
+        Thread.sleep(6000);
+
+        return TicketUtil.getShakeUser(hostHolder.getUser(),redisTemplate);
+    }
+
+    public List<User> findNearBy(double longitude, double latitude) {
+//        update user,
+        User u = hostHolder.getUser();
+        u.setLongitude(longitude);
+        u.setLatitude(latitude);
+        userMapper.updateUserLocation(u);
+        List<User> users = userMapper.findAll();
+
+        // find all user and sort by distance;
+        users.remove(u);
+        users.sort(new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                double distance1 = Math.pow(o1.getLongitude()-longitude, 2)+Math.pow(o1.getLatitude()-latitude, 2);
+                double distance2 = Math.pow(o2.getLongitude()-longitude, 2)+Math.pow(o2.getLatitude()-latitude, 2);
+                return distance1-distance2>0?1:-1;
+            }
+        });
+        return users;
     }
 }

@@ -1,0 +1,10 @@
+2020-10-29 14:44:21,577 WARN (AbstractHandlerExceptionResolver.java:199)- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-10-29 14:44:21,580 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-10-29 14:44:38,934 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-10-29 14:44:49,005 INFO (PassportInterceptor.java:40)- get token [907dca867c8549d3a34967853779d52b]
+2020-10-29 14:44:49,006 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=19, username=yzy)]
+2020-10-29 14:44:50,098 INFO (PassportInterceptor.java:48)- get user [User(id=19, name=yzy, password=43FE6D90EBF3D3EC2BDEF6600F47C380, salt=eaa70, headUrl=www.baidu.com)]
+2020-10-29 14:44:50,098 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 14:46:46,263 INFO (PassportInterceptor.java:40)- get token [f992fae99ebe4be1ac5143b62538ecfc]
+2020-10-29 14:46:46,264 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=19, username=yzy)]
+2020-10-29 14:46:47,802 INFO (PassportInterceptor.java:48)- get user [User(id=19, name=yzy, password=43FE6D90EBF3D3EC2BDEF6600F47C380, salt=eaa70, headUrl=www.baidu.com)]

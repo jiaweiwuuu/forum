@@ -1,0 +1,11 @@
+2020-10-29 16:02:43,013 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-29 16:02:43,015 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-10-29 16:02:43,030 INFO (FrameworkServlet.java:547)- Completed initialization in 15 ms
+2020-10-29 16:02:43,052 INFO (PassportInterceptor.java:40)- get token [833412238db24a7c85cf2256c4e9d077]
+2020-10-29 16:02:43,273 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-10-29 16:02:43,291 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-10-29 16:02:45,864 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-10-29 16:02:46,076 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=www.baidu.com, longitude=120.3, latitude=30.43)]
+2020-10-29 16:02:46,076 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 16:02:49,949 INFO (PassportInterceptor.java:40)- get token [7f999a2390854159a30221325e88d879]
+2020-10-29 16:02:49,951 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]

@@ -1,0 +1,12 @@
+2020-10-29 14:39:50,534 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-29 14:39:50,536 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-10-29 14:39:50,542 INFO (FrameworkServlet.java:547)- Completed initialization in 6 ms
+2020-10-29 14:39:50,564 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-10-29 14:39:50,606 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-10-29 14:40:00,403 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-10-29 14:42:29,002 INFO (PassportInterceptor.java:40)- get token [00c4d9a07e2a4cba9b3babe97a89efff]
+2020-10-29 14:42:29,047 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-10-29 14:42:29,755 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=www.baidu.com)]
+2020-10-29 14:42:29,755 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 14:42:56,677 WARN (AbstractHandlerExceptionResolver.java:199)- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-10-29 14:42:56,686 INFO (LoginRequireInterceptor.java:21)- not logged in

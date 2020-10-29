@@ -1,0 +1,8 @@
+2020-10-29 14:54:09,365 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2020-10-29 14:54:09,367 INFO (ServletWebServerApplicationContext.java:285)- Root WebApplicationContext: initialization completed in 744 ms
+2020-10-29 14:54:09,921 INFO (ExecutorConfigurationSupport.java:181)- Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-29 14:54:10,150 WARN (FreeMarkerAutoConfiguration.java:67)- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-10-29 14:54:10,184 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8000"]
+2020-10-29 14:54:10,213 INFO (TomcatWebServer.java:220)- Tomcat started on port(s): 8000 (http) with context path '/forum'
+2020-10-29 14:54:10,225 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 1.905 seconds (JVM running for 2.373)
+2020-10-29 14:54:16,357 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'

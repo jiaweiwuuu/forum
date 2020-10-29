@@ -1,0 +1,10 @@
+2020-10-29 15:01:44,915 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=www.baidu.com)]
+2020-10-29 15:01:44,916 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 15:01:45,181 INFO (PassportInterceptor.java:48)- get user [User(id=19, name=yzy, password=43FE6D90EBF3D3EC2BDEF6600F47C380, salt=eaa70, headUrl=www.baidu.com)]
+2020-10-29 15:01:45,182 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 15:01:48,687 INFO (PassportInterceptor.java:40)- get token [fab67828bb1044f583b903debee9e93b]
+2020-10-29 15:01:48,689 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=19, username=yzy)]
+2020-10-29 15:01:49,233 INFO (PassportInterceptor.java:48)- get user [User(id=19, name=yzy, password=43FE6D90EBF3D3EC2BDEF6600F47C380, salt=eaa70, headUrl=www.baidu.com)]
+2020-10-29 15:01:49,233 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-10-29 15:07:55,242 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-29 15:07:55,244 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...

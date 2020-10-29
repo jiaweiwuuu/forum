@@ -116,58 +116,25 @@ public class UserController {
 
     }
 
-//    @GetMapping("/headImg")
-//    public String downloadFile(HttpServletRequest request, HttpServletResponse response,
-//                               @RequestParam("fileName") String fileName) {
-//        if (fileName != null) {
-//            File path = null;
-//            try {
-//                path = new File(ResourceUtils.getURL("classpath:").getPath());
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//            String filePath = path.getAbsolutePath()+"/static/upload/";
-//
-//
-//            File file = new File(filePath,fileName );
-//            if (file.exists()) {
-//                response.setContentType("application/octet-stream");//
-//                response.setHeader("content-type", "application/octet-stream");
-//                response.setHeader("Content-Disposition", "attachment;fileName=" + fileName);// 设置文件名
-//                byte[] buffer = new byte[1024];
-//                FileInputStream fis = null;
-//                BufferedInputStream bis = null;
-//                try {
-//                    fis = new FileInputStream(file);
-//                    bis = new BufferedInputStream(fis);
-//                    OutputStream os = response.getOutputStream();
-//                    int i = bis.read(buffer);
-//                    while (i != -1) {
-//                        os.write(buffer, 0, i);
-//                        i = bis.read(buffer);
-//                    }
-//                    System.out.println("success");
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                } finally {
-//                    if (bis != null) {
-//                        try {
-//                            bis.close();
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                    if (fis != null) {
-//                        try {
-//                            fis.close();
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        return null;
-//    }
+    @GetMapping("/shakeUser")
+    public ResultVO<Object> shake() {
+        User user = null;
+        try {
+            user = service.addAndGetShakeUser();
+        } catch (InterruptedException e) {
+            log.error("addAndGetShakeUser, sleep error");
+            log.error(e.getMessage());
+            e.printStackTrace();
+            return ResponseUtil.makeErrorResponse(ResponseEnum.Error);
+        }
+        return ResponseUtil.makeSuccessResponse(user);
+    }
+
+    @GetMapping("/findNearby")
+    public ResultVO<Object> findNearBy(double longitude, double latitude ) {
+        List<User> users = service.findNearBy(longitude, latitude);
+
+        return ResponseUtil.makeSuccessResponse(users);
+    }
 
 }

@@ -1,0 +1,8 @@
+2020-10-29 16:02:12,681 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-10-29 16:02:15,093 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on yaozhiyuandeMacBook-Pro.local with PID 99517 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-29 16:02:15,096 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-29 16:02:15,644 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-29 16:02:15,646 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-29 16:02:15,674 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-10-29 16:02:15,997 INFO (TomcatWebServer.java:108)- Tomcat initialized with port(s): 8000 (http)
+2020-10-29 16:02:16,005 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8000"]

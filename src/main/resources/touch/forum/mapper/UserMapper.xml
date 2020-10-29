@@ -18,6 +18,10 @@
         select * from user where name = #{name}
     </select>
 
+    <select id="findAll" resultType="touch.forum.entity.User" resultMap="userMap">
+        select * from user where longitude is not null
+    </select>
+
     <select id="getUserByIds" resultType="touch.forum.entity.User" resultMap="userMap">
         select * from user where id in
         <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
@@ -28,5 +32,11 @@
     <update id="updateUser" parameterType="touch.forum.entity.User">
         UPDATE user SET head_url=#{headUrl} where id = #{id}
     </update>
+
+    <update id="updateUserLocation" parameterType="touch.forum.entity.User">
+        UPDATE user SET head_url=#{longitude}, latitude = #{latitude} where id = #{id}
+    </update>
+
+
 
 </mapper>

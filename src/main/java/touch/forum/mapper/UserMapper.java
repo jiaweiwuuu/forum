@@ -20,4 +20,8 @@ public interface UserMapper {
     List<User> getUserByIds(List<Integer> ids);
 
     void updateUser(User u);
+
+    void updateUserLocation(User u);
+
+    List<User> findAll();
 }
