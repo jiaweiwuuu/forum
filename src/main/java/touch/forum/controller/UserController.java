@@ -147,14 +147,15 @@ public class UserController {
     @GetMapping("/VerifyCodeEmail")
     public ResultVO<Object>  getVerificationCodeByEmail(String email){
         String checkCode = String.valueOf(new Random().nextInt(899999) + 100000);
-        HostHolder.codes.set(checkCode);
-
+        log.info("get checkCode" + checkCode);
         redisTemplate.opsForValue().set(email,checkCode,60, TimeUnit.SECONDS);
-
+        log.info("send to redis");
         String message = "your verification code is："+checkCode;
         try {
             service.sendSimpleMail(email, "verification code", message);
         }catch (Exception e){
+            e.printStackTrace();
+            log.info("sendSimpleMail error"+ e.getMessage());
             return ResponseUtil.makeErrorResponse(ResponseEnum.Error);
         }
         return ResponseUtil.makeSuccessResponse(checkCode);

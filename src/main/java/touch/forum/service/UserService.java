@@ -119,6 +119,7 @@ public class UserService {
 
 
     public void sendSimpleMail(String to,String title,String content){
+        log.info("sendSimpleMail in "+ "to: "+ to + "content: "+ content);
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(from);
         message.setTo(to);

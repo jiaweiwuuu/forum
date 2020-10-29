@@ -1,0 +1,6 @@
+2020-10-30 00:37:26,925 INFO (PassportInterceptor.java:40)- get token [e4ad5a24b56544c2a0265b5595545153]
+2020-10-30 00:37:26,927 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=41, username=yzy25)]
+2020-10-30 00:37:31,932 WARN (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4fde4d2a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-10-30 00:37:36,934 WARN (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4cab2a92 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-10-30 00:37:41,940 WARN (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@827fb69 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-10-30 00:37:46,944 WARN (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1da43f27 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

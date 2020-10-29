@@ -1,0 +1,12 @@
+2020-10-30 01:39:27,867 INFO (UserController.java:150)- get checkCode540652
+2020-10-30 01:39:27,874 INFO (UserController.java:152)- send to redis
+2020-10-30 01:39:27,877 INFO (UserService.java:122)- sendSimpleMail in to: yaozhiyuan0117@163.comcontent: your verification code is：540652
+2020-10-30 01:39:57,997 INFO (UserController.java:157)- sendSimpleMail errorMail server connection failed; nested exception is javax.mail.MessagingException: Got bad greeting from SMTP host: smtp.qq.com, port: 465, response: [EOF]. Failed messages: javax.mail.MessagingException: Got bad greeting from SMTP host: smtp.qq.com, port: 465, response: [EOF]
+2020-10-30 01:40:37,107 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 01:40:37,109 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-10-30 01:40:37,117 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-10-30 01:40:40,958 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on 192.168.5.54 with PID 2866 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-30 01:40:40,961 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-30 01:40:41,492 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-30 01:40:41,494 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-30 01:40:41,518 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
