@@ -33,7 +33,7 @@ spring:
           starttls:
             enable: true
             required: true
-    port: 465
+    port: 587
     protocol: smtp
 
 
