@@ -10,11 +10,18 @@
         <result property="createAt" column="create_at"/>
         <result property="commentCount" column="comment_count"/>
 
+        <association property="user" column="userId" javaType="touch.forum.entity.User">
+            <id property="id" column="u_id"/>
+            <result property="name" column="name"/>
+            <result property="headUrl" column="head_url"/>
+        </association>
+
         <collection property="images"  ofType="touch.forum.entity.QuestionImage" column="image_url">
             <id property="id" column="image_id"/>
             <result property="quesionId" column="id" />
             <result property="imageUrl" column="image_url"/>
         </collection>
+
 
     </resultMap>
 
@@ -33,9 +40,10 @@
     </select>
 
     <select id="getAllQuestions" resultType="touch.forum.entity.Question" resultMap="questionMap">
-        select q.id, q.title, q.content, q.user_id, q.create_at, q.comment_count, i.image_url, i.id as image_id
+        select q.id, q.title, q.content, q.user_id, q.create_at, q.comment_count, i.image_url, i.id as image_id, u.id as u_id, u.name, u.head_url
         from question q
         left join question_image i on q.id = i.question_id
+        left join user u on u.id = q.user_id
         order by id desc
     </select>
 

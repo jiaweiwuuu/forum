@@ -21,4 +21,5 @@ public class Question {
     // discard
     private String imageUrl;
     private ArrayList<QuestionImage> images;
+    private User user;
 }
