@@ -27,8 +27,8 @@ public class QuestionController {
                                 @RequestParam String title,
                                 @RequestParam String content,
                                 @RequestParam(required = false) String address,
-                                @RequestParam(required = false) double longitude,
-                                @RequestParam(required = false) double latitude,
+                                @RequestParam(defaultValue = "0.0") double longitude,
+                                @RequestParam(defaultValue = "0.0") double latitude,
                                 @RequestParam(value = "files") MultipartFile[] files) {
         int questionId;
         try{
@@ -54,8 +54,8 @@ public class QuestionController {
             @RequestParam String title,
             @RequestParam String content,
             @RequestParam(required = false) String address,
-            @RequestParam(required = false) double longitude,
-            @RequestParam(required = false) double latitude) {
+            @RequestParam(defaultValue = "0.0") double longitude,
+            @RequestParam(defaultValue = "0.0") double latitude) {
         int id;
         try{
             id = service.createQuestion(title,content,hostHolder.getUser(), address, longitude, latitude);
