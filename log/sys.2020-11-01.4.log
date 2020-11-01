@@ -1,0 +1,27 @@
+2020-11-01 19:48:24,336 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-01 19:48:24,359 INFO (DirectJDKLog.java:173)- Pausing ProtocolHandler ["http-nio-8000"]
+2020-11-01 19:48:24,359 INFO (DirectJDKLog.java:173)- Stopping service [Tomcat]
+2020-11-01 19:48:24,363 INFO (DirectJDKLog.java:173)- Stopping ProtocolHandler ["http-nio-8000"]
+2020-11-01 19:48:24,363 INFO (DirectJDKLog.java:173)- Destroying ProtocolHandler ["http-nio-8000"]
+2020-11-01 19:48:24,369 INFO (ConditionEvaluationReportLoggingListener.java:136)- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-01 19:48:24,373 ERROR (LoggingFailureAnalysisReporter.java:40)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8000 or configure this application to listen on another port.
+
+2020-11-01 19:49:05,513 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on yaozhiyuandeMacBook-Pro.local with PID 13067 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-11-01 19:49:05,515 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-01 19:49:06,016 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-01 19:49:06,018 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-01 19:49:06,037 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.

@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 
+import java.util.Date;
 import java.util.Objects;
 
 @Data
@@ -17,6 +18,18 @@ public class User {
     private String headUrl;
     private double longitude;
     private double latitude;
+
+    // 0:female, 1:male
+    private int gender;
+    private String email;
+    private Date birthday;
+    private String university;
+    private String major;
+    private String targetCompany;
+    private String targetJob;
+    // 1: firstLogin, 0:not
+    private int firstLogin;
+
 
     @Override
     public boolean equals(Object o) {

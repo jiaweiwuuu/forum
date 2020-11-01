@@ -1,0 +1,9 @@
+2020-10-30 11:30:59,019 INFO (UserController.java:150)- get checkCode786186
+2020-10-30 11:30:59,029 INFO (UserController.java:152)- send to redis
+2020-10-30 11:30:59,032 INFO (UserService.java:122)- sendSimpleMail in to: yaozhiyuan0117@163.comcontent: your verification code is：786186
+2020-10-30 11:31:02,302 INFO (UserService.java:129)- send email success!
+2020-10-30 13:45:04,451 WARN (HikariPool.java:787)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s785ms).
+2020-10-30 16:00:47,314 WARN (HikariPool.java:787)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m11s947ms).
+2020-10-30 16:06:29,552 WARN (HikariPool.java:787)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m12s229ms).
+2020-10-30 16:12:11,518 WARN (HikariPool.java:787)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m11s954ms).
+2020-10-30 16:17:23,483 WARN (HikariPool.java:787)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m11s966ms).

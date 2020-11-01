@@ -1,0 +1,8 @@
+2020-11-01 20:06:44,427 INFO (PassportInterceptor.java:40)- get token [6466309a47b041e595164f9473527d5d]
+2020-11-01 20:06:44,430 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=45, username=yzy29)]
+2020-11-01 20:06:44,830 INFO (PassportInterceptor.java:48)- get user [User(id=45, name=yzy29, password=FA98C5D7659F46D2DB180BBEE36938E9, salt=76988, headUrl=www.baidu.com, longitude=0.0, latitude=0.0, gender=1, email=yzy@163.com, birthday=Mon Jan 01 00:00:00 CST 2001, university=unimelb, major=information technology, targetCompany=google, targetJob=developer, firstLogin=1)]
+2020-11-01 20:06:44,830 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-01 20:19:17,425 INFO (PassportInterceptor.java:40)- get token [bd5e0e41a9884fdaa93b02f3a9425d04]
+2020-11-01 20:19:17,427 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-11-01 20:19:17,790 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=120.3, latitude=30.4, gender=0, email=null, birthday=null, university=null, major=null, targetCompany=null, targetJob=null, firstLogin=0)]
+2020-11-01 20:19:17,790 INFO (LoginRequireInterceptor.java:24)- logged in

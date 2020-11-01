@@ -1,0 +1,12 @@
+2020-10-30 11:13:30,773 INFO (UserController.java:150)- get checkCode325731
+2020-10-30 11:13:30,783 INFO (UserController.java:152)- send to redis
+2020-10-30 11:13:30,786 INFO (UserService.java:122)- sendSimpleMail in to: yaozhiyuan0117@163.comcontent: your verification code is：325731
+2020-10-30 11:13:32,204 INFO (UserService.java:129)- send email success!
+2020-10-30 11:13:43,184 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-30 11:13:43,185 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-10-30 11:13:44,231 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-10-30 11:30:14,081 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on yaozhiyuandeMacBook-Pro.local with PID 4114 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-10-30 11:30:14,087 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-10-30 11:30:14,633 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-30 11:30:14,636 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-10-30 11:30:14,662 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.

@@ -1,0 +1,10 @@
+2020-11-01 20:00:35,409 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 1.83 seconds (JVM running for 2.259)
+2020-11-01 20:00:43,672 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-01 20:00:43,673 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-11-01 20:00:43,681 INFO (FrameworkServlet.java:547)- Completed initialization in 8 ms
+2020-11-01 20:00:43,704 INFO (PassportInterceptor.java:40)- get token [9eee0214d35d4134a61335957be60c41]
+2020-11-01 20:00:43,982 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=44, username=yzy28)]
+2020-11-01 20:00:43,999 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-11-01 20:00:46,093 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-11-01 20:00:46,327 INFO (PassportInterceptor.java:48)- get user [User(id=44, name=yzy28, password=7A9FD918DE98A58A32E30118FBE4CA1B, salt=f277b, headUrl=www.baidu.com, longitude=0.0, latitude=0.0, gender=0, email=null, birthday=null, university=null, major=null, targetCompany=null, targetJob=null, firstLogin=0)]
+2020-11-01 20:00:46,328 INFO (LoginRequireInterceptor.java:24)- logged in

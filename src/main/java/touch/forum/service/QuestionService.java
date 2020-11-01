@@ -73,4 +73,20 @@ public class QuestionService {
         QuestionImage image = new QuestionImage().setQuesionId(questionId).setImageUrl(imageUrl);
         questionMapper.insertImage(image);
     }
+
+    public int createQuestion(String title, String content, User user, String address, double longitude, double latitude) {
+        content = HtmlUtils.htmlEscape(content);
+        title = HtmlUtils.htmlEscape(title);
+
+        if(user == null){
+            throw new RuntimeException("user should login");
+        }
+        Question question = new Question().setUserId(user.getId()).
+                setTitle(title).setContent(content).setCommentCount(0).
+                setCreateAt(Calendar.getInstance().getTime()).
+                setAddress(address).setLongitude(longitude).setLatitude(latitude);
+
+        questionMapper.create(question);
+        return question.getId();
+    }
 }

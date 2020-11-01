@@ -4,10 +4,13 @@
 
     <resultMap id="userMap" type="touch.forum.entity.User">
         <result property="headUrl" column="head_url"/>
+        <result property="targetCompany" column="target_company"/>
+        <result property="targetJob" column="target_job"/>
+        <result property="firstLogin" column="first_login"/>
     </resultMap>
 
     <insert id="addUser" parameterType="touch.forum.entity.User" useGeneratedKeys="true" keyProperty="id">
-        insert into user (id, name, password, salt, head_url)values (#{id},#{name},#{password},#{salt},#{headUrl})
+        insert into user (id, name, password, salt, head_url, first_login)values (#{id},#{name},#{password},#{salt},#{headUrl}, #{firstLogin})
     </insert>
 
     <select id="getUserById" parameterType="int" resultType="touch.forum.entity.User" resultMap="userMap">
@@ -37,5 +40,16 @@
         UPDATE user SET longitude=#{longitude}, latitude = #{latitude} where id = #{id}
     </update>
 
+    <update id="updateUserNotFirstLogin" >
+        UPDATE user SET first_login =0 where name = #{name}
+    </update>
+
+    <update id="updateUserInfo" parameterType="touch.forum.entity.User">
+        UPDATE user
+        SET gender = #{gender}, email = #{email}, birthday= #{birthday},
+        university = #{university}, major = #{major},
+        target_company = #{targetCompany}, target_job=#{targetJob}
+        where id = #{id}
+    </update>
 
 </mapper>

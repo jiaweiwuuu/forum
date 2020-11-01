@@ -24,4 +24,8 @@ public interface UserMapper {
     void updateUserLocation(User u);
 
     List<User> findAll();
+
+    void updateUserNotFirstLogin(String name);
+
+    void updateUserInfo(User user);
 }

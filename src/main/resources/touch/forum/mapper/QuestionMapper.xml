@@ -26,8 +26,10 @@
     </resultMap>
 
     <insert id="create" parameterType="touch.forum.entity.Question" useGeneratedKeys="true" keyProperty="id">
-        insert into question (title,content, user_id, create_at, comment_count, image_url)
-        values (#{title},#{content},#{userId},#{createAt},#{commentCount}, #{imageUrl});
+        insert into question
+        (title,content, user_id, create_at, comment_count, image_url, address, longitude,latitude)
+        values
+        (#{title},#{content},#{userId},#{createAt},#{commentCount}, #{imageUrl}, #{address}, #{longitude}, #{latitude});
     </insert>
 
     <insert id="insertImage" parameterType="touch.forum.entity.QuestionImage" useGeneratedKeys="true" keyProperty="id">

@@ -1,0 +1,13 @@
+2020-11-01 19:53:37,713 INFO (UserService.java:53)- get user name when create [yzy28]
+2020-11-01 19:53:42,870 INFO (PassportInterceptor.java:40)- get token [9eee0214d35d4134a61335957be60c41]
+2020-11-01 19:53:42,872 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=44, username=yzy28)]
+2020-11-01 19:53:43,239 INFO (PassportInterceptor.java:48)- get user [User(id=44, name=yzy28, password=7A9FD918DE98A58A32E30118FBE4CA1B, salt=f277b, headUrl=www.baidu.com, longitude=0.0, latitude=0.0, gender=0, email=null, birthday=null, university=null, major=null, targetCompany=null, targetJob=null, firstLogin=0)]
+2020-11-01 19:53:43,239 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-01 19:59:36,583 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-01 19:59:36,584 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-11-01 19:59:36,593 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-11-01 19:59:40,705 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on yaozhiyuandeMacBook-Pro.local with PID 13182 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-11-01 19:59:40,708 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-01 19:59:41,310 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-01 19:59:41,312 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-01 19:59:41,335 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.

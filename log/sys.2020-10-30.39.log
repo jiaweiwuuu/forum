@@ -1,0 +1,10 @@
+2020-10-30 11:30:16,025 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.341 seconds (JVM running for 3.15)
+2020-10-30 11:30:56,147 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-30 11:30:56,148 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-10-30 11:30:56,153 INFO (FrameworkServlet.java:547)- Completed initialization in 5 ms
+2020-10-30 11:30:56,165 INFO (PassportInterceptor.java:40)- get token [e4ad5a24b56544c2a0265b5595545153]
+2020-10-30 11:30:56,489 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=41, username=yzy25)]
+2020-10-30 11:30:56,515 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-10-30 11:30:58,779 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-10-30 11:30:59,003 INFO (PassportInterceptor.java:48)- get user [User(id=41, name=yzy25, password=C48BEF58FD4FB733201E7D051412F410, salt=7f04a, headUrl=91813f6d-5df4-4318-a1a2-53bd391ab46c.jpg, longitude=0.0, latitude=0.0)]
+2020-10-30 11:30:59,004 INFO (LoginRequireInterceptor.java:24)- logged in

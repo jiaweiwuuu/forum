@@ -14,6 +14,7 @@ import touch.forum.ResultVO;
 import touch.forum.consts.ResponseEnum;
 import touch.forum.entity.HostHolder;
 import touch.forum.entity.Question;
+import touch.forum.entity.TokenAndLogin;
 import touch.forum.entity.User;
 import touch.forum.exception.IncorrectPasswordException;
 import touch.forum.exception.UserNotExistException;
@@ -68,8 +69,10 @@ public class UserController {
                             @RequestParam String password,
                             @RequestParam(value = "rememberme", defaultValue = "false") boolean rememberMe,
                             HttpServletResponse response) {
+        TokenAndLogin tl;
         try {
-            String token = service.login(username, password, rememberMe);
+            tl= service.login(username, password, rememberMe);
+            String token = tl.getToken();
             Cookie cookie = new Cookie("token", token);
             cookie.setPath("/");
             response.addCookie(cookie);
@@ -78,6 +81,13 @@ public class UserController {
         }catch (IncorrectPasswordException e){
             return ResponseUtil.makeErrorResponse(ResponseEnum.IncorrectPassword);
         }
+        return ResponseUtil.makeSuccessResponse(tl.getLogin());
+    }
+
+
+    @PostMapping("/updateInfo")
+    public ResultVO<Object> updateUser(User user) {
+        service.updateUser(user);
         return ResponseUtil.makeSuccessResponse();
     }
 

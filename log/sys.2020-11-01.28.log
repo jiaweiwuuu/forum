@@ -1,0 +1,9 @@
+2020-11-01 20:38:13,805 WARN (AbstractHandlerExceptionResolver.java:199)- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required double parameter 'longitude' is not present]
+2020-11-01 20:38:13,812 INFO (PassportInterceptor.java:40)- get token [bd5e0e41a9884fdaa93b02f3a9425d04]
+2020-11-01 20:38:13,813 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-11-01 20:38:13,996 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=120.3, latitude=30.4, gender=0, email=null, birthday=null, university=null, major=null, targetCompany=null, targetJob=null, firstLogin=0)]
+2020-11-01 20:38:13,996 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-01 20:39:14,417 INFO (PassportInterceptor.java:40)- get token [bd5e0e41a9884fdaa93b02f3a9425d04]
+2020-11-01 20:39:14,419 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=23, username=yzy13)]
+2020-11-01 20:39:14,796 INFO (PassportInterceptor.java:48)- get user [User(id=23, name=yzy13, password=5D771E7DC495345A849D9F2D6DC9B6B3, salt=f5441, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=120.3, latitude=30.4, gender=0, email=null, birthday=null, university=null, major=null, targetCompany=null, targetJob=null, firstLogin=0)]
+2020-11-01 20:39:14,797 INFO (LoginRequireInterceptor.java:24)- logged in

@@ -1,0 +1,8 @@
+2020-11-01 20:00:46,530 INFO (UserService.java:53)- get user name when create [yzy29]
+2020-11-01 20:00:53,125 INFO (PassportInterceptor.java:40)- get token [6466309a47b041e595164f9473527d5d]
+2020-11-01 20:00:53,127 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=45, username=yzy29)]
+2020-11-01 20:00:53,488 INFO (PassportInterceptor.java:48)- get user [User(id=45, name=yzy29, password=FA98C5D7659F46D2DB180BBEE36938E9, salt=76988, headUrl=www.baidu.com, longitude=0.0, latitude=0.0, gender=0, email=null, birthday=null, university=null, major=null, targetCompany=null, targetJob=null, firstLogin=1)]
+2020-11-01 20:00:53,488 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-01 20:00:58,077 INFO (PassportInterceptor.java:40)- get token [6466309a47b041e595164f9473527d5d]
+2020-11-01 20:00:58,080 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=45, username=yzy29)]
+2020-11-01 20:00:58,444 INFO (PassportInterceptor.java:48)- get user [User(id=45, name=yzy29, password=FA98C5D7659F46D2DB180BBEE36938E9, salt=76988, headUrl=www.baidu.com, longitude=0.0, latitude=0.0, gender=0, email=null, birthday=null, university=null, major=null, targetCompany=null, targetJob=null, firstLogin=1)]

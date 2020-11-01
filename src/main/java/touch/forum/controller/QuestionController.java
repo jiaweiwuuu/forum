@@ -26,10 +26,13 @@ public class QuestionController {
     public ResultVO<Object> createQuestionWithImage(
                                 @RequestParam String title,
                                 @RequestParam String content,
+                                @RequestParam String address,
+                                @RequestParam double longitude,
+                                @RequestParam double latitude,
                                 @RequestParam(value = "files") MultipartFile[] files) {
         int questionId;
         try{
-            questionId = service.createQuestion(title,content,hostHolder.getUser());
+            questionId = service.createQuestion(title,content,hostHolder.getUser(), address, longitude, latitude);
             if (files != null && files.length >= 1) {
                 for (MultipartFile file : files) {
                     String fileUrl = FileUtil.uploadFile(file);

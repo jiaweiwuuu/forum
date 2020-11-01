@@ -22,4 +22,9 @@ public class Question {
     private String imageUrl;
     private ArrayList<QuestionImage> images;
     private User user;
+
+    //like Australia-melbourne...
+    private String address;
+    private double longitude;
+    private double latitude;
 }

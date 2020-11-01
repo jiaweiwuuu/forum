@@ -7,10 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-import touch.forum.entity.HostHolder;
-import touch.forum.entity.LoginTicket;
-import touch.forum.entity.Question;
-import touch.forum.entity.User;
+import touch.forum.entity.*;
 import touch.forum.exception.IncorrectPasswordException;
 import touch.forum.exception.UserNotExistException;
 import touch.forum.exception.UsernameExistException;
@@ -51,7 +48,7 @@ public class UserService {
             throw new UsernameExistException("user name exist");
         }
         user = new User();
-        user.setName(username).setSalt(UUID.randomUUID().toString().substring(0,5)).setHeadUrl(DEFAULT_HEAD_URL);
+        user.setName(username).setSalt(UUID.randomUUID().toString().substring(0,5)).setHeadUrl(DEFAULT_HEAD_URL).setFirstLogin(1);
         user.setPassword(HashUtil.MD5(password+user.getSalt()));
         log.info("get user name when create [{}]",user.getName());
         userMapper.addUser(user);
@@ -61,19 +58,26 @@ public class UserService {
         return token;
     }
 
-    public String login(String username, String password, boolean rememberMe) throws UserNotExistException, IncorrectPasswordException {
+    public TokenAndLogin login(String username, String password, boolean rememberMe) throws UserNotExistException, IncorrectPasswordException {
         User user = userMapper.getUserByName(username);
         if(user == null){
             log.info("user not exists for {}", username);
             throw new UserNotExistException();
+        }
+        int isFirstLogin = user.getFirstLogin();
+
+        if (isFirstLogin==1){
+            userMapper.updateUserNotFirstLogin(username);
         }
         String expectedPsw = HashUtil.MD5(password + user.getSalt());
         if(!expectedPsw.equals(user.getPassword())){
             throw new IncorrectPasswordException("incorrect password");
         }
         String token = TicketUtil.setTicket(user,redisTemplate,rememberMe);
-        return token;
+        return new TokenAndLogin().setToken(token).setLogin(isFirstLogin);
     }
+
+
 
     public User getUserInfo(Integer id) {
         return userMapper.getUserById(id);
@@ -131,5 +135,9 @@ public class UserService {
 
 
 
-
+    public void updateUser(User user) {
+        User u = hostHolder.getUser();
+        user.setId(u.getId());
+        userMapper.updateUserInfo(user);
+    }
 }
