@@ -26,9 +26,9 @@ public class QuestionController {
     public ResultVO<Object> createQuestionWithImage(
                                 @RequestParam String title,
                                 @RequestParam String content,
-                                @RequestParam String address,
-                                @RequestParam double longitude,
-                                @RequestParam double latitude,
+                                @RequestParam(required = false) String address,
+                                @RequestParam(required = false) double longitude,
+                                @RequestParam(required = false) double latitude,
                                 @RequestParam(value = "files") MultipartFile[] files) {
         int questionId;
         try{
@@ -50,11 +50,15 @@ public class QuestionController {
 
 
     @PostMapping("/create")
-    public ResultVO<Object> createQuestion(@RequestParam String title,
-                                   @RequestParam String content) {
+    public ResultVO<Object> createQuestion(
+            @RequestParam String title,
+            @RequestParam String content,
+            @RequestParam(required = false) String address,
+            @RequestParam(required = false) double longitude,
+            @RequestParam(required = false) double latitude) {
         int id;
         try{
-            id = service.createQuestion(title,content,hostHolder.getUser());
+            id = service.createQuestion(title,content,hostHolder.getUser(), address, longitude, latitude);
         }
         catch (Exception e){
             e.printStackTrace();
