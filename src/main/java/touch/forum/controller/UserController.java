@@ -82,10 +82,17 @@ public class UserController {
     }
 
     @GetMapping("/userInfo")
-    public ResultVO<Object> GetUserInfo(){
+    public ResultVO<Object> GetUserInfo(@RequestParam(value = "id",defaultValue = "-1") Integer userId){
         User user = null;
+
         try{
-            user = service.getUserInfo(hostHolder.getUser().getId());
+            if(userId == -1){
+                user = service.getUserInfo(hostHolder.getUser().getId());
+            }
+            else{
+                user = service.getUserInfo(userId);
+            }
+
         }
         catch (NullPointerException e){
             return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
@@ -93,6 +100,7 @@ public class UserController {
 
         return ResponseUtil.makeSuccessResponse(user);
     }
+
 
     @PostMapping("/headImg")
     public ResultVO<Object> uploadHeadImg(@RequestParam(value = "file") MultipartFile file, Model model, HttpServletRequest request) {

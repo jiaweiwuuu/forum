@@ -1,7 +1,7 @@
-2020-10-30 11:13:30,773 INFO (UserController.java:150)- get checkCode325731
-2020-10-30 11:13:30,783 INFO (UserController.java:152)- send to redis
-2020-10-30 11:13:30,786 INFO (UserService.java:122)- sendSimpleMail in to: yaozhiyuan0117@163.comcontent: your verification code is：325731
-2020-10-30 11:13:32,204 INFO (UserService.java:129)- send email success!
-2020-10-30 11:13:43,184 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-30 11:13:43,185 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
-2020-10-30 11:13:44,231 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-11-01 17:34:40,741 INFO (PassportInterceptor.java:40)- get token [82d5d255d54c43fca74a04fd86c69456]
+2020-11-01 17:34:40,744 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=17, username=jiaweiw1)]
+2020-11-01 17:34:41,102 INFO (PassportInterceptor.java:48)- get user [User(id=17, name=jiaweiw1, password=27487CD84C440534F2773997DA010815, salt=e944b, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=145.1789, latitude=-37.800121)]
+2020-11-01 17:34:41,103 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-01 17:34:46,294 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-01 17:34:46,295 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-11-01 17:34:46,306 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
