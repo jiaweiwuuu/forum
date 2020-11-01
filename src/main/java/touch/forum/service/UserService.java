@@ -51,6 +51,7 @@ public class UserService {
         user.setName(username).setSalt(UUID.randomUUID().toString().substring(0,5)).setHeadUrl(DEFAULT_HEAD_URL).setFirstLogin(1);
         user.setPassword(HashUtil.MD5(password+user.getSalt()));
         log.info("get user name when create [{}]",user.getName());
+        log.info("get user first login when create [{}]",user.getFirstLogin());
         userMapper.addUser(user);
         user.setId(userMapper.getUserByName(username).getId());
         String token = TicketUtil.setTicket(user,redisTemplate,false);
