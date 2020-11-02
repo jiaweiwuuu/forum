@@ -29,6 +29,7 @@ public class User {
     private String targetJob;
     // 1: firstLogin, 0:not
     private int firstLogin;
+    private String fullname;
 
 
     @Override

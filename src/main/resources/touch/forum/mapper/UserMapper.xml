@@ -47,7 +47,7 @@
     <update id="updateUserInfo" parameterType="touch.forum.entity.User">
         UPDATE user
         SET gender = #{gender}, email = #{email}, birthday= #{birthday},
-        university = #{university}, major = #{major},
+        university = #{university}, major = #{major}, fullname = #{fullname}
         target_company = #{targetCompany}, target_job=#{targetJob}
         where id = #{id}
     </update>
