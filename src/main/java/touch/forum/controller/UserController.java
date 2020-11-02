@@ -46,11 +46,14 @@ public class UserController {
     @Autowired
     private HostHolder hostHolder;
 
+
+
     @PostMapping("/signup")
     public ResultVO<Object> createUser(@RequestParam String username, @RequestParam String password, HttpServletResponse response) {
 
         try{
             String token = service.createUser(username, password);
+
             Cookie cookie = new Cookie("token", token);
             response.addCookie(cookie);
         }catch (UsernameExistException e){

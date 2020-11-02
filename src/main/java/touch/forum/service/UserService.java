@@ -39,7 +39,7 @@ public class UserService {
 
     static private String VERIFICATION_CODE= "Verification code";
 
-
+    private static String DEFAULT_IMAGE_URL = "153189c9-c6d6-41f7-99d6-8649f33bbc62.jpeg";
 
     public static String DEFAULT_HEAD_URL = "www.baidu.com";
     public String createUser(String username, String password) throws UsernameExistException {
@@ -50,12 +50,13 @@ public class UserService {
         user = new User();
         user.setName(username).setSalt(UUID.randomUUID().toString().substring(0,5)).setHeadUrl(DEFAULT_HEAD_URL).setFirstLogin(1);
         user.setPassword(HashUtil.MD5(password+user.getSalt()));
-        log.info("get user name when create [{}]",user.getName());
-        log.info("get user first login when create [{}]",user.getFirstLogin());
+
         userMapper.addUser(user);
-        user.setId(userMapper.getUserByName(username).getId());
+        int id = userMapper.getUserByName(username).getId();
+        user.setId(id);
+        User u = new User().setHeadUrl(DEFAULT_IMAGE_URL).setId(id);
+        userMapper.updateUser(u);
         String token = TicketUtil.setTicket(user,redisTemplate,false);
-//        userMapper.addUser(user);
         return token;
     }
 
