@@ -136,7 +136,7 @@ public class UserService {
 
 
 
-    public void updateUser(User user) {
+    public void updateUser(User user) throws Exception{
         User u = hostHolder.getUser();
         user.setId(u.getId());
         userMapper.updateUserInfo(user);

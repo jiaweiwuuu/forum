@@ -87,7 +87,12 @@ public class UserController {
 
     @PostMapping("/updateInfo")
     public ResultVO<Object> updateUser(User user) {
-        service.updateUser(user);
+        try {
+            service.updateUser(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseUtil.makeErrorResponse(ResponseEnum.NotLoginError);
+        }
         return ResponseUtil.makeSuccessResponse();
     }
 
