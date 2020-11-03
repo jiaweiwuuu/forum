@@ -39,7 +39,7 @@ public class UserService {
 
     static private String VERIFICATION_CODE= "Verification code";
 
-    private static String DEFAULT_IMAGE_URL = "153189c9-c6d6-41f7-99d6-8649f33bbc62.jpeg";
+    private static String DEFAULT_IMAGE_URL = "9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg";
 
     public static String DEFAULT_HEAD_URL = "www.baidu.com";
     public String createUser(String username, String password) throws UsernameExistException {
