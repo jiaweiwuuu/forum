@@ -82,6 +82,11 @@ public class QuestionController {
     }
 
 
+    @GetMapping("/newsByKeyword")
+    public ResultVO<Object> getQuestionsByKeyword(@RequestParam("keyword") String keyword){
+        List<Question> questions = service.getQuestionByKeyword(keyword);
+        return ResponseUtil.makeSuccessResponse(questions);
+    }
 
 
 }

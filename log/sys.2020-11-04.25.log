@@ -1,0 +1,9 @@
+2020-11-04 18:46:14,404 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-04 18:46:44,849 INFO (PassportInterceptor.java:40)- get token [7490de28e8064ddbbf3883c0fe10899b]
+2020-11-04 18:46:44,851 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=52, username=yzy46)]
+2020-11-04 18:46:45,203 INFO (PassportInterceptor.java:48)- get user [User(id=52, name=yzy46, password=15EE64DD5DF14F25D60696B9E6985830, salt=22294, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=0.0, latitude=0.0, gender=1, email=null, birthday=null, university=unimelb, major=null, targetCompany=null, targetJob=developer, firstLogin=0, fullname=zhiyuanyao)]
+2020-11-04 18:46:45,204 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-04 18:47:13,205 INFO (PassportInterceptor.java:40)- get token [7490de28e8064ddbbf3883c0fe10899b]
+2020-11-04 18:47:13,206 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=52, username=yzy46)]
+2020-11-04 18:47:13,608 INFO (PassportInterceptor.java:48)- get user [User(id=52, name=yzy46, password=15EE64DD5DF14F25D60696B9E6985830, salt=22294, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=0.0, latitude=0.0, gender=1, email=null, birthday=null, university=unimelb, major=null, targetCompany=null, targetJob=developer, firstLogin=0, fullname=zhiyuanyao)]
+2020-11-04 18:47:13,609 INFO (LoginRequireInterceptor.java:24)- logged in

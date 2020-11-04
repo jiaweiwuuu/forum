@@ -89,4 +89,8 @@ public class QuestionService {
         questionMapper.create(question);
         return question.getId();
     }
+
+    public List<Question> getQuestionByKeyword(String keyword) {
+        return questionMapper.getQuestionsByContentOrTitle(keyword);
+    }
 }

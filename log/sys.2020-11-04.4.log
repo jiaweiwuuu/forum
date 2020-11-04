@@ -1,0 +1,7 @@
+2020-11-04 09:57:38,558 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-11-04 09:58:45,344 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-11-04 09:58:45,821 INFO (QuestionService.java:40)- imageurl in null is null
+2020-11-04 10:04:39,489 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-11-04 10:04:44,500 WARN (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2fdb39ec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-11-04 10:04:49,503 WARN (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21f7c42c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-11-04 10:04:54,508 WARN (PoolBase.java:184)- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a210f59 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

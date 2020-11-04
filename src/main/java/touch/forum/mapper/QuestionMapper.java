@@ -24,4 +24,7 @@ public interface QuestionMapper {
 
     void insertImage(QuestionImage image);
 
+    List<Question> getQuestionsByContentOrTitle(String keyword);
+
+
 }
