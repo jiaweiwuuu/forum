@@ -1,0 +1,3 @@
+2020-11-04 18:48:11,283 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 18:48:11,284 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-11-04 18:48:11,290 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.

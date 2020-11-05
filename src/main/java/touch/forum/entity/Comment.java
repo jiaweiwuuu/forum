@@ -16,4 +16,5 @@ public class Comment {
     private int entityType;
     private Date createAt;
     private int userId;
+    private User user;
 }

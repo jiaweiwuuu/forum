@@ -7,10 +7,20 @@
         <result property="entityType" column="entity_type"/>
         <result property="createAt" column="create_at"/>
         <result property="userId" column="user_id"/>
+
+        <association property="user" column="userId" javaType="touch.forum.entity.User">
+            <id property="id" column="u_id"/>
+            <result property="name" column="name"/>
+            <result property="headUrl" column="head_url"/>
+        </association>
+
     </resultMap>
 
     <select id="getCommentById" resultType="touch.forum.entity.Comment" resultMap="commentMap">
-        select * from comment where id = #{id}
+        select c.id, c.content, c.entity_id,c.entity_type ,c.create_at,c.user_id, u.id as u_id,u.name, u.head_url
+        from comment c
+        left join user u on c.user_id = u.id
+        where id = #{id}
     </select>
 
     <insert id="create" parameterType="touch.forum.entity.Comment" useGeneratedKeys="true" keyProperty="id">
@@ -18,7 +28,10 @@
     </insert>
 
     <select id="getCommentByEntityId" resultType="touch.forum.entity.Comment" resultMap="commentMap">
-        select * from comment where entity_id = #{entityId} and entity_type = #{entityType} order by id desc
+        select c.id, c.content, c.entity_id,c.entity_type ,c.create_at,c.user_id, u.id as u_id,u.name, u.head_url
+        from comment c
+        left join user u on c.user_id = u.id
+        where entity_id = #{entityId} and entity_type = #{entityType} order by id desc
     </select>
 
     <select id="getCommentCount" resultType="int">
