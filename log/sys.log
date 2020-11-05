@@ -1,2 +1,10 @@
-2020-11-05 16:24:42,630 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.159 seconds (JVM running for 2.752)
-2020-11-05 16:26:01,410 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-05 17:29:15,647 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.488 seconds (JVM running for 3.037)
+2020-11-05 17:29:25,606 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 17:29:25,607 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-11-05 17:29:25,613 INFO (FrameworkServlet.java:547)- Completed initialization in 5 ms
+2020-11-05 17:29:25,622 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-11-05 17:29:25,659 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-11-05 17:29:28,457 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-11-05 17:29:57,216 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-05 17:29:57,217 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-11-05 17:29:57,226 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.

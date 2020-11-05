@@ -3,6 +3,8 @@
 <mapper namespace="touch.forum.mapper.CommentMapper">
 
     <resultMap id="commentMap" type="touch.forum.entity.Comment">
+        <result property="id" column="id"/>
+        <result property="content" column="content"/>
         <result property="entityId" column="entity_id"/>
         <result property="entityType" column="entity_type"/>
         <result property="createAt" column="create_at"/>
