@@ -66,10 +66,11 @@ public class UserService {
             log.info("user not exists for {}", username);
             throw new UserNotExistException();
         }
-        int isFirstLogin = user.getFirstLogin();
-
-        if (isFirstLogin==1){
-            userMapper.updateUserNotFirstLogin(username);
+        String fullname = user.getFullname();
+        int isFirstLogin =0;
+//        System.out.println("-----"+fullname);
+        if (fullname==null){
+            isFirstLogin=1; //first login
         }
         String expectedPsw = HashUtil.MD5(password + user.getSalt());
         if(!expectedPsw.equals(user.getPassword())){

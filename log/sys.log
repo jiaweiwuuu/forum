@@ -1,10 +1,8 @@
-2020-11-05 17:29:15,647 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.488 seconds (JVM running for 3.037)
-2020-11-05 17:29:25,606 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-11-05 17:29:25,607 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
-2020-11-05 17:29:25,613 INFO (FrameworkServlet.java:547)- Completed initialization in 5 ms
-2020-11-05 17:29:25,622 INFO (LoginRequireInterceptor.java:21)- not logged in
-2020-11-05 17:29:25,659 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2020-11-05 17:29:28,457 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
-2020-11-05 17:29:57,216 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
-2020-11-05 17:29:57,217 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
-2020-11-05 17:29:57,226 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-11-05 17:46:34,594 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-05 17:46:41,178 INFO (PassportInterceptor.java:40)- get token [32dbcbf3c14048cba16f9c86f58a7a92]
+2020-11-05 17:46:41,180 INFO (PassportInterceptor.java:46)- get ticket [LoginTicket(userId=70, username=yzy55)]
+2020-11-05 17:46:41,729 INFO (PassportInterceptor.java:48)- get user [User(id=70, name=yzy55, password=7A92FBA5F54B28C753AE95D9F4197252, salt=7bb2c, headUrl=9f065c20-6c44-45c7-bd1a-472c5df3bb8d.jpeg, longitude=0.0, latitude=0.0, gender=1, email=yzy@163.com, birthday=Mon Jan 01 00:00:00 CST 2001, university=unimelb, major=information technology, targetCompany=google, targetJob=developer, firstLogin=0, fullname=zhiyuanyao)]
+2020-11-05 17:46:41,729 INFO (LoginRequireInterceptor.java:24)- logged in
+2020-11-05 17:46:56,333 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-05 17:46:56,334 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-11-05 17:46:56,340 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.

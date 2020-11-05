@@ -1,0 +1,15 @@
+2020-11-05 17:29:15,647 INFO (StartupInfoLogger.java:61)- Started ForumApplication in 2.488 seconds (JVM running for 3.037)
+2020-11-05 17:29:25,606 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 17:29:25,607 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2020-11-05 17:29:25,613 INFO (FrameworkServlet.java:547)- Completed initialization in 5 ms
+2020-11-05 17:29:25,622 INFO (LoginRequireInterceptor.java:21)- not logged in
+2020-11-05 17:29:25,659 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2020-11-05 17:29:28,457 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2020-11-05 17:29:57,216 INFO (ExecutorConfigurationSupport.java:218)- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-05 17:29:57,217 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2020-11-05 17:29:57,226 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2020-11-05 17:43:23,782 INFO (StartupInfoLogger.java:55)- Starting ForumApplication on 192.168.5.54 with PID 26385 (/Users/yaozhiyuan/IdeaProjects/forum/target/classes started by yaozhiyuan in /Users/yaozhiyuan/IdeaProjects/forum)
+2020-11-05 17:43:23,784 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-05 17:43:24,411 INFO (RepositoryConfigurationDelegate.java:249)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 17:43:24,413 INFO (RepositoryConfigurationDelegate.java:127)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-05 17:43:24,439 INFO (RepositoryConfigurationDelegate.java:187)- Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
